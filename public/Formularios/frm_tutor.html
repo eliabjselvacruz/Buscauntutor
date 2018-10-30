@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Incio</title>
+	<meta name="viewport" content="width=device-width, initial-scalable=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-sacale=1.0">
+	<link rel="stylesheet" href="estilos/bootstrap.min.css">
+	<link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+
+<div class="container">
+	<header>
+		<h1 id="header-docente">
+			Registro Docente
+		</h1>
+	</header>
+	<form frm_tutor>
+		<br>
+		<!-- Control Nombre -->
+		<div class="form-group row">
+			<label for="nombre_t" class="col-sm-2 col-form-label">Nombre:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="nombre_t" placeholder="Introduzca su nombre..." required>
+			</div>
+		</div>
+
+		<!-- Control Identificación -->
+		<div class="form-group row">
+			<label for="identificacion_t" class="col-sm-2 col-form-label">Identificación:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="identificacion_t" placeholder="Introduzca su identificacion..." required>
+			</div>
+		</div>
+
+		<!-- Control Email -->
+		<div class="form-group row">
+			<label for="email_t" class="col-sm-2 col-form-label">Email:</label>
+			<div class="col-sm-10">
+				<input type="email" class="form-control" id="email_t" placeholder="Introduzca su Email..."  required>
+			</div>
+		</div>
+
+		<!-- Control Telefono -->
+		<div class="form-group row">
+			<label for="telefono_t" class="col-sm-2 col-form-label">Teléfono:</label>
+			<div class="col-sm-10">
+				<input type="number" class="form-control" id="telefono_t" placeholder="Introduzca su telefono..." required>
+			</div>
+		</div>
+
+		<!-- Control Ciudad -->
+		<div class="form-group row">
+		 <label for="ciudad_t" class="col-sm-2 col-form-label">Ciudad:</label>
+		 <div class="col-sm-10">
+			 <select class="custom-select" name="" id="ciudad_t" required>
+				 <option value="">Elige una ciudad...</option>
+				 <option value="">Atlántico Norte</option>
+				 <option value="">Atlántico Sur</option>
+				 <option value="">Boaco</option>
+				 <option value="">Carazo</option>
+				 <option value="">Chinandega</option>
+				 <option value="">Chontales</option>
+				 <option value="">Estelí</option>
+				 <option value="">Granada</option>
+				 <option value="">Jinotega</option>
+				 <option value="">León</option>
+				 <option value="">Madriz</option>
+				 <option value="">Managua</option>
+				 <option value="">Masaya</option>
+				 <option value="">Matagalpa</option>
+				 <option value="">Nueva Segovia</option>
+				 <option value="">Río San Juan</option>
+				 <option value="">Rivas</option>
+			 </select>
+		 </div>
+		</div>
+
+		<!-- Control Idioma -->
+		<div class="form-group row">
+		 <label for="idioma_t" class="col-sm-2 col-form-label">Idioma:</label>
+		 <div class="col-sm-10">
+			 <select class="custom-select" name="" id="idioma_t" required>
+				 <option value="">Seleccione su idioma...</option>
+				 <option value="">Español</option>
+				 <option value="">Ingles</option>
+			 </select>
+		 </div>
+		</div>
+
+		<!-- Control Experiencia -->
+		<div class="form-group row">
+			<label for="experiencia_t" class="col-sm-2 col-form-label">Experiencia:</label>
+			<div class="col-sm-10">
+				<input type="number" min="0" class="form-control" id="experiencia_t" placeholder="Años de experiencia como docente..."  required>
+			</div>
+		</div>
+
+		<!-- Control Género -->
+		<div class="form-group row">
+		 <label for="genero_t" class="col-sm-2 col-form-label">Género:</label>
+		 <div class="col-sm-10">
+			 <select class="custom-select" name="" id="genero_t" required>
+				 <option value="">Seleccione su género...</option>
+				 <option value="">Masculino</option>
+				 <option value="">Femenino</option>
+ 				 <option value="">Otro</option>
+			 </select>
+		 </div>
+		</div>
+
+		<!-- Control Archivo Identificación y Control Archivo Hoja de Vida-->
+		<div class="form-group">
+			<div class="row">
+				<form enctype="multipart/form-data">
+					<label for="cedula_t" class="col-sm-2 col-form-label">Identificación:</label>
+					<div class="col-sm-10">
+						<input type="file" class="file btn-outline-success" multiple=false data-preview-file-type="any" id="cedula_t" required>
+					</div>
+					<br><br>
+					<label for="cv_t" class="col-sm-2 col-form-label">Hoja de vida:</label>
+					<div class="col-sm-10">
+						<input type="file" class="file btn-outline-warning" multiple=false data-preview-file-type="any" id="cv_t" required>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- Control Terminos y Condidiones-->
+		<div class="form-group row">
+			<div class="col-sm-2">Terminos y Condiciones</div>
+			<div class="col-sm-10">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="chk_termino_t">
+					<label class="form-check-label small text-muted" for="chk_termino_t">
+						Al hacer click aqui usted acepta los términos de servicio y declaración de privacidad. Ocasionalmente le enviaremos correos electronicos relacionados con la cuenta.
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Control Envio-->
+		<div class="form-group row">
+			<div class="col-sm-10">
+				<button type="submit" class="btn btn-primary" id="btn_registro_t">Registrarse</button>
+			</div>
+		</div>
+
+	</form>
+</div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

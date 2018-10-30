@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scalable=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-sacale=1.0">
+	<link rel="stylesheet" href="estilos/bootstrap.min.css">
+	<link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+
+<div class="container">
+	<header>
+		<h1 id="header-usuario">
+			Inicio de sesion
+		</h1>
+	</header>
+	<form id="frm_login">
+
+		<br>
+
+		<!-- Control Usuario -->
+		<div class="form-group row">
+			<label for="usuario" class="col-sm-2 col-form-label">Usuario:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="usuario" placeholder="Introduzca su usuario...">
+			</div>
+		</div>
+
+		<!-- Control Contraseña -->
+		<div class="form-group row">
+			<label for="clave_u" class="col-sm-2 col-form-label">Contraseña:</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" id="clave_u" placeholder="Introduzca su contraseña...">
+			</div>
+		</div>
+
+		<!-- Botón Inicio Sesión -->
+		<div class="form-group row">
+			<div class="col-sm-2">
+				<button type="submit" class="btn btn-outline-warning btn-block" id="btn_login">Iniciar Sesión</button>
+			</div>
+		</div>
+
+		<!-- Botón Inicio Sesión Google -->
+		<div class="form-group row">
+			<div class="col-sm-2">
+				<button type="submit" class="btn btn-outline-warning btn" id="btn_google">Iniciar Sesion con Google</button>
+			</div>
+		</div>
+
+	</form>
+</div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
