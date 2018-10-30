@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conexion Firebase</title>
+
+</head>
+<body>
+    <h2>Ingrese todos su datos personales</h2>
+<form id="registroU">
+    <p>
+        <label for="nombre">Ingrese su nombre</label>
+        <input type="text" name="nombre" id="nombreU">
+    </p>  
+    <p>
+        <label for="apellido">Ingrese su apellido</label>
+        <input type="text" name="apellido" id="apellidoU"> 
+    </p> 
+    <p>
+        <label for="correo">Ingrese su correo</label>
+        <input type="text" name="correo" id="correoU">
+
+    </p>
+    <p>
+        <label for="telefono">Ingrese su telefono</label>
+        <input type="text" name="telefono" id="telefonoU">
+    </p>
+     <p>
+        <label for="ciudad">Ingrese su ciudad</label>
+        <input type="text" name="ciudad" id="ciudadU">
+    </p>
+ 
+    <button type='submit'>Registrar datos</button>
+</form>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script src="enviodatos.js"></script>
+ 
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCND3npIMnQL6BbsaLTgcjKMq7Ml53PWn8",
+    authDomain: "familiarizacionp.firebaseapp.com",
+    databaseURL: "https://familiarizacionp.firebaseio.com",
+    projectId: "familiarizacionp",
+    storageBucket: "familiarizacionp.appspot.com",
+    messagingSenderId: "1031831913118"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+</html>
