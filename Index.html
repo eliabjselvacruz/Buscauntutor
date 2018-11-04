@@ -1,16 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Incio</title>
-	<meta name="viewport" content="width=device-width, initial-scalable=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-sacale=1.0">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busca Tutor</title>
+  <!-- CDN de los íconos -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CDN Materialize CSS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
+  <!-- Cuerpo del Sitio -->
+  
+  <!-- Barra de nvegación -->
+  <div class=" navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo">Busca Tutor</a>
+          <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
 
+            <!-- Botón Página Principal -->
+            <li><button class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >Página Pincipal</button></li>
 
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+            <li>
+              <!-- Botón Menú Opciones-->
+              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>Opciones</a>
+            
+              <!-- Menú del botón -->
+              <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#">Registro Estudiante</a></li>
+                <li><a href="#">Registro Docente</a></li>
+                <li><a href="#">Subscribirse</a></li>
+              </ul>
+            </li>
+    
+            <!-- Botón Inicio Sesión -->
+            <li><button class="btn blue waves-effect waves-light z-depth-3" href="#" >Inicio Sesión</button></li>
+          
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Barra de Navegación Lateral-->
+  <ul class="side-nav" id="mobile-menu">
+    <li><a class="btn cyan" href="#">Página Principal</a></li>
+    <li><a class="btn blue" href="#">Opciones</a></li>
+    <li><a class="btn blue" href="#">Inicio de Sesión</a></li>
+  </ul>
+
+<div class="parallax-container center">
+		<div class="section container">
+			<!-- Esto debe ser manejado con CSS OJO -->
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h3 class="col s4 light-green-text text-lighten-5 z-depth-5">
+				Clases particulares en línea.
+				Profesores disponibles todo el tiempo para que aprendas desde donde estés.
+			</h3>
+		</div>
+	<div class="parallax"><img id="plx" src="recursos/fondo4.jpeg"></div>
+</div>
+
+<div class="blue white-text z-depth-5">
+	<div class="container section">
+		<div class="row">
+				<div class="col s7">
+					<h6>
+						En solo cuatro simples pasos podés estar comenzando la clase con un profesor especializado en la materia:
+					</h6>
+					<ul>
+						<li>
+							<h5>
+								Elige tu materia
+							</h5>
+						</li>
+						<li>
+							<h5>
+								Elige tu enfoque
+							</h5>							
+						</li>
+						<li>
+							<h5>
+								Elige tu horario
+							</h5>
+						</li>
+						<li>
+							<h5>
+								Recibe la clase
+							</h5>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</div>
+</div>
+
+<!-- Pie de Página -->
+<footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Contenido del footer</h5>
+          <p class="grey-text text-lighten-4">Contenido que puede ir en el pie de la pagina.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Vínculos</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center">
+      <div class="container">
+        &copy; 2018 Copyright Busca Tutor
+      </div>
+    </div>
+  </footer>
+
+  <!--  CDN jQuery -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <!-- CDN Materialize JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  <!-- Métodos de los componentes del Materialize -->
+  <script>
+    $("document").ready(function () {
+    $('select').material_select();
+    });
+    $(".button-collapse").sideNav();
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, 
+      hover: true, 
+      gutter: 0, 
+      belowOrigin: false, 
+      alignment: 'left', 
+      stopPropagation: false 
+    }
+
+    );
+	$('.parallax').parallax();
+  </script>
 </body>
+
 </html>
