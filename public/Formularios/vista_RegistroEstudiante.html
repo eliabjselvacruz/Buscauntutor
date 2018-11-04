@@ -15,8 +15,9 @@
 </head>
 
 <body>
-  <!-- AQUI EL CONTENIDO DEL SITIO -->
+  <!-- Cuerpo del Sitio -->
   
+  <!-- Barra de nvegación -->
   <div class=" navbar-fixed">
     <nav class="blue">
       <div class="nav-wrapper">
@@ -24,10 +25,12 @@
           <a href="#" class="brand-logo">Busca Tutor</a>
           <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
+
+            <!-- Botón Página Principal -->
             <li><button class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >Página Pincipal</button></li>
 
             <li>
-              <!-- Botón menú -->
+              <!-- Botón Menú Opciones-->
               <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>Opciones</a>
             
               <!-- Menú del botón -->
@@ -38,6 +41,7 @@
               </ul>
             </li>
     
+            <!-- Botón Inicio Sesión -->
             <li><button class="btn blue waves-effect waves-light z-depth-3" href="#" >Inicio Sesión</button></li>
           
           </ul>
@@ -45,22 +49,25 @@
       </div>
     </nav>
   </div>
+
+  <!-- Barra de Navegación Lateral-->
   <ul class="side-nav" id="mobile-menu">
     <li><a class="btn cyan" href="#">Página Principal</a></li>
     <li><a class="btn blue" href="#">Opciones</a></li>
     <li><a class="btn blue" href="#">Inicio de Sesión</a></li>
   </ul>
 
-
+  <!-- Formulario -->
   <div class="container">
     <div class="row">
         <div class="center col s12 m12 l12 card-panel z-depth-5">
 
+            <!-- Encabezado -->
             <h3 class="center cyan white-text">Registro Estudiante</h3>
 
             <!-- Control Nombres -->
             <div class="input-field col s6">
-                <input type="text" id="nomre_e" class="">
+                <input type="text" id="nomre_e" class="" required>
                 <label for="nombre_e">Ingrese sus nombres</label>
             </div>
 
@@ -73,13 +80,13 @@
             <!-- Control Contraseña -->
             <div class="input-field col s6">
                 <input   type="password" id="clave_u" class="">
-                <label for="clave_u">Contraseña</label>
+                <label for="clave_e">Contraseña</label>
             </div>
 
             <!-- Control Verificación Contraseña -->
             <div class="input-field col s6">
                 <input   type="password" id="clave_u_2" class="">
-                <label for="clave_u_2">Confirme su contraseña</label>
+                <label for="clave_e_2">Confirme su contraseña</label>
             </div>
 
             <!-- Control Telefono -->
@@ -90,7 +97,7 @@
             
             <!-- Control Ciudad -->
             <select class="input-field col s6" id="ciudad_e">
-              <option value="" disabled selected>Selecciona su ciudad</option>
+              <option value="" disabled selected>Seleccione su ciudad</option>
               <option value="">Atlántico Norte</option>
               <option value="">Atlántico Sur</option>
               <option value="">Boaco</option>
@@ -108,15 +115,15 @@
               <option value="">Nueva Segovia</option>
               <option value="">Río San Juan</option>
               <option value="">Rivas</option>
-              <label>Leyenda del select</label>
+              <label for="ciudad_e">Ciudad</label>
             </select>
 
             <!-- Control Idioma -->
             <select class="input-field col s6" id="idioma_e">
-              <option value="" disabled selected>Selecciona su idioma</option>
+              <option value="" disabled selected>Seleccione su idioma</option>
               <option value="">Español</option>
               <option value="">Ingles</option>
-              <label>Idioma</label>
+              <label for="idioma_e">Idioma</label>
             </select>
 
             <!-- Control Género -->
@@ -125,7 +132,7 @@
               <option value="">Masculino</option>
               <option value="">Femenino</option>
               <option value="">Otro</option>
-              <label>Genero</label>
+              <label for="genero_e">Genero</label>
             </select>
             
             <!-- Texto términos y Condiciones -->
@@ -136,7 +143,7 @@
             </h6>
 
             <!-- Botón de Inicio de Sesión -->
-            <button class="btn btn-large waves-effect waves-light pink z-depth-5" type="submit" name="action">Registrarse</button>
+            <button id="btn_registro_e" class="btn btn-large waves-effect waves-light pink z-depth-5" type="submit" name="action">Registrarse</button>
             
             <!-- Botón de Inicio de Sesión con Google-->
             <br>
@@ -146,6 +153,7 @@
     </div>
 </div>
 
+<!-- Pie de Página -->
 <footer class="page-footer blue darken-4">
     <div class="container">
       <div class="row">
@@ -176,6 +184,7 @@
   <!-- CDN Materialize JS  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   
+  <!-- Métodos de los componentes del Materialize -->
   <script>
     $("document").ready(function () {
     $('select').material_select();
