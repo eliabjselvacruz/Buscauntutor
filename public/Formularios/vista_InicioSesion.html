@@ -56,7 +56,7 @@
   <br>
 
   <!-- Formulario -->
-  <div class="container">
+  <div id="frm_Sesion" class="container">
     <div class="row">
         <div class="center col s12 m12 l12 card-panel z-depth-5">
 
@@ -76,10 +76,10 @@
             </div>
 
             <!-- Botón de Inicio de Sesión -->
-            <button class="btn btn-large waves-effect waves-light blue z-depth-5" type="submit" name="action">Iniciar sesión</button>
+            <button id="btn_login" class="btn btn-large waves-effect waves-light blue z-depth-5" type="submit" name="action">Iniciar sesión</button>
             
             <!-- Botón de Inicio de Sesión con Google-->
-            <button class="btn btn-large waves-effect waves-light red z-depth-5" type="submit" name="action">Iniciar sesión con Google</button>
+            <button id="btn_google" class="btn btn-large waves-effect waves-light red z-depth-5" type="submit" name="action">Iniciar sesión con Google</button>
             <br>
             <br>
 
@@ -136,5 +136,20 @@
     }
     );
   </script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+      authDomain: "busca-un-tutor.firebaseapp.com",
+      databaseURL: "https://busca-un-tutor.firebaseio.com",
+      projectId: "busca-un-tutor",
+      storageBucket: "busca-un-tutor.appspot.com",
+      messagingSenderId: "356130835030"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="/js/InicioSesion.js"></script>
 </body>
 </html>

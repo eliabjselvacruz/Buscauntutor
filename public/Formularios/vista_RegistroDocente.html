@@ -149,7 +149,7 @@
                     <input type="file" multiple>
                   </div>
                   <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" placeholder="Puedes adjuntar mas de un archivo">
+                    <input id="btnCV" class="file-path validate" type="text" placeholder="Experiencia Profesional">
                   </div>
               </div>
 
@@ -160,7 +160,7 @@
                     <input type="file">
                   </div>
                   <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" placeholder="Copia de identificación">
+                    <input id="inpCedula" class="file-path validate" type="text" placeholder="Copia de identificación">
                   </div>
               </div>
             
@@ -171,8 +171,8 @@
               </p>
             </h6>
 
-            <!-- Botón de Inicio de Sesión -->
-            <button class="btn btn-large waves-effect waves-light pink z-depth-5" type="submit" name="action">Registrarse</button>
+            <!-- Botón de Registro -->
+            <button id="btnRegistro" class="btn btn-large waves-effect waves-light pink z-depth-5" type="submit" name="action">Registrarse</button>
             
             <br>
             <br>
@@ -230,6 +230,22 @@
     }
     );
   </script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+    authDomain: "busca-un-tutor.firebaseapp.com",
+    databaseURL: "https://busca-un-tutor.firebaseio.com",
+    projectId: "busca-un-tutor",
+    storageBucket: "busca-un-tutor.appspot.com",
+    messagingSenderId: "356130835030"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script src="/js/RegistroDocente.js"></script>
 </body>
 
 </html>
