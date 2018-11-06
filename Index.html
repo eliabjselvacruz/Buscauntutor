@@ -18,20 +18,17 @@
   <!-- Cuerpo del Sitio -->
   
   <!-- Barra de nvegación -->
-  <div class=" navbar-fixed">
+  <div class="navbar-fixed">
     <nav class="blue">
-      <div class="nav-wrapper">
+      <div class="nav-wrapper z-depth-4">
         <div class="container">
           <a href="#" class="brand-logo">Busca Tutor</a>
           <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
 
-            <!-- Botón Página Principal -->
-            <li><button class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >Página Pincipal</button></li>
-
             <li>
               <!-- Botón Menú Opciones-->
-              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>Opciones</a>
+              <a class='dropdown-button btn z-depth-3 cyan' href='#' data-activates='dropdown1'>MENÚ</a>
             
               <!-- Menú del botón -->
               <ul id='dropdown1' class='dropdown-content'>
@@ -42,7 +39,7 @@
             </li>
     
             <!-- Botón Inicio Sesión -->
-            <li><button class="btn blue waves-effect waves-light z-depth-3" href="#" >Inicio Sesión</button></li>
+            <li><button class="btn red lighten-1 waves-effect waves-light z-depth-3" href="#" >Inicio Sesión</button></li>
           
           </ul>
         </div>
@@ -52,9 +49,17 @@
 
   <!-- Barra de Navegación Lateral-->
   <ul class="side-nav" id="mobile-menu">
-    <li><a class="btn cyan" href="#">Página Principal</a></li>
-    <li><a class="btn blue" href="#">Opciones</a></li>
-    <li><a class="btn blue" href="#">Inicio de Sesión</a></li>
+
+    <div class="blue white-text center section z-depth-4">
+      <h3>
+        MENÚ
+      </h3>
+    </div>
+
+    <li><a class="btn blue z-depth-4 lighten-1" href="#">Registro Estudiante</a></li>
+    <li><a class="btn blue z-depth-4" href="#">Registro Docente</a></li>
+    <li><a class="btn green z-depth-4" href="#">Subscribirse</a></li>
+    <li><a class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
   </ul>
 
 <div class="parallax-container center">
@@ -76,35 +81,57 @@
 <div class="blue white-text z-depth-5">
 	<div class="container section">
 		<div class="row">
-				<div class="col s7">
-					<h6>
+				<div class="col s12 m8">
+					<h5>
 						En solo cuatro simples pasos podés estar comenzando la clase con un profesor especializado en la materia:
-					</h6>
-					<ul>
-						<li>
-							<h5>
-								Elige tu materia
-							</h5>
-						</li>
-						<li>
-							<h5>
-								Elige tu enfoque
-							</h5>							
-						</li>
-						<li>
-							<h5>
-								Elige tu horario
-							</h5>
-						</li>
-						<li>
-							<h5>
-								Recibe la clase
-							</h5>
-						</li>
-					</ul>
-				</div>
+					</h5>
+        </div>
+        <div class="col s12 m4">
+            <ul>
+                <li>
+                  <h5>
+                    <i class="small material-icons left">class</i>
+                    Elige tu materia
+                  </h5>
+                </li>
+                <li>
+                  <h5>
+                    <i class="small material-icons left">center_focus_strong</i>
+                    Elige tu enfoque
+                  </h5>							
+                </li>
+                <li>
+                  <h5>
+                    <i class="small material-icons left">alarm</i>
+                    Elige tu horario
+                  </h5>
+                </li>
+                <li>
+                  <h5>
+                    <i class="small material-icons left">play_circle_outline</i>                          
+                    Recibe la clase
+                  </h5>
+                </li>
+              </ul>
+        </div>
 		</div>
 	</div>
+</div>
+
+<div class="parallax-container center">
+		<div class="section container">
+			<!-- Esto debe ser manejado con CSS OJO -->
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h3 class="col s4 light-green-text text-lighten-5 z-depth-5">
+				Clases particulares en línea.
+				Profesores disponibles todo el tiempo para que aprendas desde donde estés.
+			</h3>
+		</div>
+	<div class="parallax"><img id="plx" src="recursos/fondo4.jpeg"></div>
 </div>
 
 <!-- Pie de Página -->
@@ -120,8 +147,6 @@
           <ul>
             <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
           </ul>
         </div>
       </div>
