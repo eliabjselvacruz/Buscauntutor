@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio Sesión</title>
+  <!-- CDN de los íconos -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CDN Materialize CSS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Cuerpo del Sitio -->
+  
+  <!-- Barra de nvegación -->
+  <div class=" navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo">Busca Tutor</a>
+          <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+
+            <!-- Botón Página Principal -->
+            <li><button class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >Página Pincipal</button></li>
+
+            <li>
+              <!-- Botón Menú Opciones-->
+              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>MENÚ</a>
+            
+              <!-- Menú del botón -->
+              <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#">Registro Estudiante</a></li>
+                <li><a href="#">Registro Docente</a></li>
+                <li><a href="#">Subscribirse</a></li>
+              </ul>
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Barra de Navegación Lateral-->
+  <ul class="side-nav" id="mobile-menu">
+
+    <div class="blue white-text center section z-depth-4">
+      <h3>
+        MENÚ
+      </h3>
+    </div>
+
+    <li><a class="btn pink lighten-1 z-depth-4" href="#">Página Principal</a></li>
+    <li><a class="btn blue z-depth-4" href="#">Registro Estudiante</a></li>
+    <li><a class="btn blue z-depth-4" href="#">Registro Docente</a></li>
+    <li><a class="btn green z-depth-4" href="#">Subscribirse</a></li>
+    <li><a class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
+  </ul>
+
+  <br>
+
+  <!-- Formulario -->
+  <div id="frm_Sesion" class="container">
+    <div class="row">
+        <div class="center col s12 m12 l12 card-panel z-depth-5">
+
+            <!-- Encabezado -->
+            <h3 class="center cyan white-text">Inicio Sesión</h3>
+
+            <!-- Control Usuario -->
+            <div class="input-field col s6">
+                <input type="text" id="usuario" class="">
+                <label for="usuario">Ingrese su usuario</label>
+            </div>
+
+            <!-- Control Contraseña -->
+            <div class="input-field col s6">
+                <input   type="password" id="clave_u" class="">
+                <label for="clave_u">Contraseña</label>
+            </div>
+
+            <!-- Botón de Inicio de Sesión -->
+            <button id="btn_login" class="btn btn-large waves-effect waves-light blue z-depth-5" type="submit" name="action">Iniciar sesión</button>
+            
+            <!-- Botón de Inicio de Sesión con Google-->
+            <button id="btn_google" class="btn btn-large waves-effect waves-light red z-depth-5" type="submit" name="action">Iniciar sesión con Google</button>
+            <br>
+            <br>
+
+        </div>
+    </div>
+</div>
+
+<!-- Pie de Página -->
+<footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Contenido del footer</h5>
+          <p class="grey-text text-lighten-4">Contenido que puede ir en el pie de la pagina.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Vínculos</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center">
+      <div class="container">
+        &copy; 2018 Copyright Nombre Busca Tutor
+      </div>
+    </div>
+  </footer>
+
+  <!--  CDN jQuery -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <!-- CDN Materialize JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  <!-- Métodos de los componentes del Materialize -->
+  <script>
+    $("document").ready(function () {
+    $('select').material_select();
+    });
+    $(".button-collapse").sideNav();
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, 
+      hover: true, 
+      gutter: 0, 
+      belowOrigin: false, 
+      alignment: 'left', 
+      stopPropagation: false 
+    }
+    );
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+      authDomain: "busca-un-tutor.firebaseapp.com",
+      databaseURL: "https://busca-un-tutor.firebaseio.com",
+      projectId: "busca-un-tutor",
+      storageBucket: "busca-un-tutor.appspot.com",
+      messagingSenderId: "356130835030"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="/js/InicioSesion.js"></script>
+</body>
+</html>
