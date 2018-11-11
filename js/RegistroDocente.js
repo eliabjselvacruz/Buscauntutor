@@ -1,18 +1,26 @@
 //Get the Elements from Controls Html
-//var ID = document.getElementById('inpCedula');
-var CedButton = document.getElementById('btnCedula');
-var Cedula = document.getElementById('inpCedula').value;
+var Curriculum = document.getElementById('CV');
+var Cedula = document.getElementById('inpCedula');
+var Registrar = document.getElementById('btnRegistro');
 
-/*CedButton.addEventListener('change', function (e) {
+Cedula.addEventListener('change', function (f) {
     //Get file to upload
-    var file = e.target.files[0];
-
+    var ID = f.target.files[0];
     //Creating a storage ref
-    var storageRef = firebase.storage().ref('Identificaciones_Docente/' + file.name);
-
+    var IdentRef = firebase.storage().ref('Identificaciones_Docente/' + ID.name);
     //Upload file to storage
-    storageRef.put(file);
- 
-    //Functions, if there are errors when uploading files.
-    
-})*/
+   Registrar.addEventListener('click',function(){
+    IdentRef.put(ID); 
+   })
+})
+
+Curriculum.addEventListener('change', function (e) {
+    //Get file to upload
+    var CV = e.target.files[0];
+    //Creating a storage ref
+    var CedulaRef = firebase.storage().ref('CV_Docentes/' + CV.name);
+    //Upload file to storage
+   Registrar.addEventListener('click',function(){
+    CedulaRef.put(CV);
+   })
+})
