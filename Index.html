@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Busca Tutor</title>
+  <title>Busca un Tutor</title>
   <!-- CDN de los íconos -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CDN Materialize CSS  -->
@@ -22,7 +22,7 @@
     <nav class="blue">
       <div class="nav-wrapper z-depth-4">
         <div class="container">
-          <a href="#" class="brand-logo">Busca Tutor</a>
+          <a href="#" class="brand-logo">Busca un Tutor</a>
           <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
 
@@ -32,9 +32,8 @@
             
               <!-- Menú del botón -->
               <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#">Registro Estudiante</a></li>
-                <li><a href="#">Registro Docente</a></li>
-                <li><a href="#">Subscribirse</a></li>
+                <li><a href="#">Registrarse como Estudiante</a></li>
+                <li><a href="#">Registrarse como Docente</a></li>
               </ul>
             </li>
     
@@ -63,17 +62,26 @@
   </ul>
 
 <div class="parallax-container center">
-		<div class="section container">
+		<div class="section">
 			<!-- Esto debe ser manejado con CSS OJO -->
 			<br>
 			<br>
 			<br>
 			<br>
-			<br>
-			<h3 class="col s4 light-green-text text-lighten-5 z-depth-5">
-				Clases particulares en línea.
-				Profesores disponibles todo el tiempo para que aprendas desde donde estés.
-			</h3>
+      <br>
+      <div class="col s4 light-green-text text-lighten-5 section">
+          <h2 class="">
+            Encuentra el tutor ideal para ti
+          </h2>
+          <h3 class="">
+            Reserva un tutor de la materia que necesites
+          </h3>
+
+          <div class="input-field col s12 m3 l3">
+              <button class="btn btn-large orange waves-effect waves-light z-depth-3" href="#" >Buscar</button>
+          </div>
+
+      </div>
 		</div>
 	<div class="parallax"><img id="plx" src="recursos/fondo4.jpeg"></div>
 </div>
@@ -133,6 +141,44 @@
 		</div>
 	<div class="parallax"><img id="plx" src="recursos/fondo4.jpeg"></div>
 </div>
+
+<section>
+    <div class="container">
+        <div class="row">
+          <div class="center col s12 m12 l12 card-panel z-depth-5">
+            <h5 class="center container section">
+                Comience de forma gratuita: únase a los cientos de estudiantes que ya estan usando Busca un Tutor para reforzar tus conocimientos, tomando clases en línea desde donde estés.
+            </h5>
+            <hr class="container">
+            <div class="section">
+              <div class="row">
+        
+                <!-- Control Usuario Subcripción-->
+              <div class="input-field col s12 m3 l3">
+                  <input type="text" id="nomb_usuario_e" class="">
+                  <label for="nombre_usuario">Usuario</label>
+              </div>
+      
+              <!-- Control Email Subcripción-->
+              <div class="input-field col s12 m3 l3">
+                  <input type="email" id="email_usuario_e" class="">
+                  <label for="email_usuario">Email</label>
+              </div>
+      
+              <!-- Control Contraseña Subcripcion-->
+              <div class="input-field col s12 m3 l3">
+                  <input   type="password" id="clave_u" class="">
+                  <label for="clave_usuario">Contraseña</label>
+              </div>
+      
+              <!-- Botón Registrarse -->
+              <div class="input-field col s12 m3 l3">
+                <button class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >Registrase</button>
+              </div>
+          </div>
+        </div>
+      </div>
+</section>
 
 <!-- Pie de Página -->
 <footer class="page-footer blue darken-4">
