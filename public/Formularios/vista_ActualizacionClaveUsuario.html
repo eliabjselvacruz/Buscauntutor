@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil Estudiante</title>
+  <title>Actualizar Clave Estudiante</title>
   <!-- CDN de los íconos -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CDN Materialize CSS  -->
@@ -76,32 +76,32 @@
   <div class="col s2 blue lighten-4 z-depth-4"">
 
     <div class="section">
-        <a class="btn green darken-2 z-depth-4 col s12" href="#">
+        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
           <i class="small material-icons right">account_box</i>
           Perfil
         </a>
     </div>
     <br>
     <div class="section">
-        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
+        <a class="btn green light-1 z-depth-4 col s12" href="#">
           <i class="small material-icons right">settings</i>
           Ajustes
         </a>
     </div>
     <br>
     <div class="section">
-      <a class="btn green lighten-1 z-depth-4 col s12" href="#">
-        <i class="small material-icons right">fingerprint</i>
-        Contraseña
-      </a>
-    </div>  
+        <a class="btn green darken-2 z-depth-4 col s12" href="#">
+          <i class="small material-icons right">fingerprint</i>
+          Contraseña
+        </a>
+    </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
 
   <div class="col s10">
     <div class=" center section z-depth-4">
       <h5>
-        Perfil de Estudiante
+        Edición Perfil de Estudiante
       </h5>
     </div>
   </div>
@@ -132,88 +132,37 @@
       </h5>
     </div>
 
-    <div class="col s3">
-      <h6>
-        <b>   
-          Nombre:
-        </b>
-      </h6>
-    </div>
+    <div class="c">
+        <div class="row">
+            <div class="center col s12 m12 l12 card-panel z-depth-5">
+    
+              <!-- Control Contraseña Actual-->
+              <div class="input-field col s12">
+                  <input   type="password" id="clave_actual_e" class="">
+                  <label for="clave_actual_e">Introduzca su contraseña actual</label>
+              </div>
 
-    <div class="col s9">
-      <h6>
-        Eliab Javier Selva Cruz
-      </h6>
-    </div>
+              <!-- Control Nueva Contraseña -->
+              <div class="input-field col s12">
+                  <input   type="password" id="clave_nueva_e" class="">
+                  <label for="clave_e_2">Introduzca su nueva contraseña</label>
+              </div>
 
-    <div class="col s3">
-      <h6>
-        <b>
-          Telefono:
-        </b>
-      </h6>
-    </div>
-
-    <div class="col s9">
-      <h6>
-        87373581
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Depertamento:
-        </b>
-      </h6>
-    </div>
-
-    <div class="col s9">
-      <h6>
-        Chontales
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Idioma:
-        </b>
-      </h6>
-    </div>
-      
-    <div class="col s9">
-      <h6>
-        Español
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Género:
-        </b>
-      </h6>
-    </div>
-        
-    <div class="col s9">
-      <h6>
-        Masculino
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Correo:
-        </b>
-      </h6>
-    </div>
-          
-    <div class="col s9">
-      <h6>
-        eliabjselvacruz51@gmail.com
-      </h6>
+              <!-- Control Verificación Nueva Contraseña -->
+              <div class="input-field col s12">
+                <input   type="password" id="clave_nueva_e_2" class="">
+                <label for="clave_e_2">Confirme la contraseña</label>
+              </div>
+              
+              <!-- Botón Actualizar -->
+              <button id="btn_actualizar_clave_e" class="btn waves-effect waves-light pink lighten-1 z-depth-5" type="submit" name="action">
+                <i class="small material-icons right">update</i>
+                Actualizar
+              </button>
+              <br><br>
+  
+            </div>
+        </div>
     </div>
 
   </div>

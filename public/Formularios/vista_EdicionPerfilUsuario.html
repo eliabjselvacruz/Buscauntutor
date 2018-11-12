@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil Estudiante</title>
+  <title>Ajustes Perfil Estudiante</title>
   <!-- CDN de los íconos -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CDN Materialize CSS  -->
@@ -76,32 +76,32 @@
   <div class="col s2 blue lighten-4 z-depth-4"">
 
     <div class="section">
-        <a class="btn green darken-2 z-depth-4 col s12" href="#">
+        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
           <i class="small material-icons right">account_box</i>
           Perfil
         </a>
     </div>
     <br>
     <div class="section">
-        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
+        <a class="btn green darken-2 z-depth-4 col s12" href="#">
           <i class="small material-icons right">settings</i>
           Ajustes
         </a>
     </div>
     <br>
     <div class="section">
-      <a class="btn green lighten-1 z-depth-4 col s12" href="#">
-        <i class="small material-icons right">fingerprint</i>
-        Contraseña
-      </a>
-    </div>  
+        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
+          <i class="small material-icons right">fingerprint</i>
+          Contraseña
+        </a>
+    </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
 
   <div class="col s10">
     <div class=" center section z-depth-4">
       <h5>
-        Perfil de Estudiante
+        Edición Perfil de Estudiante
       </h5>
     </div>
   </div>
@@ -132,88 +132,84 @@
       </h5>
     </div>
 
-    <div class="col s3">
-      <h6>
-        <b>   
-          Nombre:
-        </b>
-      </h6>
-    </div>
+    <div class="c">
+        <div class="row">
+            <div class="center col s12 m12 l12 card-panel z-depth-5">
+    
+              <!-- Control Nombres -->
+              <div class="input-field col s6">
+                  <input type="text" id="nomre_e" class="" required>
+                  <label for="nombre_e">Ingrese sus nombres</label>
+              </div>
+  
+              <!-- Control Apellidos -->
+              <div class="input-field col s6">
+                  <input type="text" id="apellido_e" class="">
+                  <label for="apellido_e">Ingrese sus apellidos</label>
+              </div>
+  
+              <!-- Control Telefono -->
+              <div class="input-field col s6">
+                  <input   type="number" id="telefono_e" class="" min="0">
+                  <label for="telefono_e">Teléfono</label>
+              </div>
+              
+              <!-- Control Email -->
+              <div class="input-field col s6">
+                  <input   type="email" id="email_e" class="" min="0" disabled>
+                  <label for="email_e">Correo electrónico</label>
+              </div>
 
-    <div class="col s9">
-      <h6>
-        Eliab Javier Selva Cruz
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Telefono:
-        </b>
-      </h6>
-    </div>
-
-    <div class="col s9">
-      <h6>
-        87373581
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Depertamento:
-        </b>
-      </h6>
-    </div>
-
-    <div class="col s9">
-      <h6>
-        Chontales
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Idioma:
-        </b>
-      </h6>
-    </div>
-      
-    <div class="col s9">
-      <h6>
-        Español
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Género:
-        </b>
-      </h6>
-    </div>
-        
-    <div class="col s9">
-      <h6>
-        Masculino
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Correo:
-        </b>
-      </h6>
-    </div>
-          
-    <div class="col s9">
-      <h6>
-        eliabjselvacruz51@gmail.com
-      </h6>
+              <!-- Control Departamento -->
+              <select class="input-field col s12" id="ciudad_e">
+                <option value="" disabled selected>Seleccione su departamento</option>
+                <option value="">Atlántico Norte</option>
+                <option value="">Atlántico Sur</option>
+                <option value="">Boaco</option>
+                <option value="">Carazo</option>
+                <option value="">Chinandega</option>
+                <option value="">Chontales</option>
+                <option value="">Estelí</option>
+                <option value="">Granada</option>
+                <option value="">Jinotega</option>
+                <option value="">León</option>
+                <option value="">Madriz</option>
+                <option value="">Managua</option>
+                <option value="">Masaya</option>
+                <option value="">Matagalpa</option>
+                <option value="">Nueva Segovia</option>
+                <option value="">Río San Juan</option>
+                <option value="">Rivas</option>
+                <label for="ciudad_e">Ciudad</label>
+              </select>
+  
+              <!-- Control Idioma -->
+              <select class="input-field col s6" id="idioma_e">
+                <option value="" disabled selected>Seleccione su idioma</option>
+                <option value="">Español</option>
+                <option value="">Ingles</option>
+                <label for="idioma_e">Idioma</label>
+              </select>
+  
+              <!-- Control Género -->
+              <select class="input-field col s6" id="genero_e">
+                <option value="" disabled selected>Seleccione su género</option>
+                <option value="">Masculino</option>
+                <option value="">Femenino</option>
+                <option value="">Otro</option>
+                <label for="genero_e">Genero</label>
+              </select>
+              
+            <!-- Botón de Actualizar -->
+            <button id="btn_actualizar_e" class="btn waves-effect waves-light pink lighten-1 z-depth-5" type="submit" name="action">
+              <i class="small material-icons right">update</i>
+              Actualizar
+            </button>
+            <br>
+            <br>
+  
+            </div>
+        </div>
     </div>
 
   </div>
