@@ -76,6 +76,7 @@
             <div class="input-field col s6">
                 <input type="text" id="usuario" class="">
                 <label for="usuario">Ingrese su usuario</label>
+                <p id="nombreu"></p>
             </div>
 
             <!-- Control Contraseña -->
@@ -115,7 +116,7 @@
     </div>
     <div class="footer-copyright center">
       <div class="container">
-        &copy; 2018 Copyright Nombre Busca Tutor
+        &copy; 2018 Copyright Nombre Busca un Tutor
       </div>
     </div>
   </footer>
@@ -144,19 +145,24 @@
     );
   </script>
 
-  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
-      authDomain: "busca-un-tutor.firebaseapp.com",
-      databaseURL: "https://busca-un-tutor.firebaseio.com",
-      projectId: "busca-un-tutor",
-      storageBucket: "busca-un-tutor.appspot.com",
-      messagingSenderId: "356130835030"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="/js/InicioSesion.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+    authDomain: "busca-un-tutor.firebaseapp.com",
+    databaseURL: "https://busca-un-tutor.firebaseio.com",
+    projectId: "busca-un-tutor",
+    storageBucket: "busca-un-tutor.appspot.com",
+    messagingSenderId: "356130835030"
+  };
+  firebase.initializeApp(config);
+</script>
+<!-- <script src="../../js/Sesion.js"></script> -->
+<script src="../../js/InicioSesion.js"></script>
+<script>
+//document.querySelector('#btn_google').addEventListener('clik',sesionGoogle)
+</script>
+
 </body>
 </html>

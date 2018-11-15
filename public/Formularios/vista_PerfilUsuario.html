@@ -22,7 +22,8 @@
     <nav class="blue">
       <div class="nav-wrapper">
         <div class="container">
-          <a href="#" class="brand-logo">Busca Tutor</a>
+          <a href="#" class="brand-logo">Busca un Tutor</a>
+
           <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
 
@@ -84,13 +85,13 @@
 
   <div class="col s4">
     <div class="blue darken-1 white-text center">
-      <h5>
-        Eliab Selva
-      </h5>
+      <p id="nombre_g">
+        Klissman Espinoza
+      </p>
     </div>
     <div class="card">
       <div class="card-image">
-        <img src="https://fortunedotcom.files.wordpress.com/2018/07/gettyimages-961697338.jpg" alt="imagen">
+        <img id="img_User"  alt="imagen">
         <span class="card-title"><button class="btn green waves-effect waves-light z-depth-4">Editar</button></span>
       </div>
     </div>
@@ -112,7 +113,7 @@
     </div>
 
     <div class="col s9">
-      <h6>
+      <h6 id="name_E">
         Eliab Javier Selva Cruz
       </h6>
     </div>
@@ -126,7 +127,7 @@
     </div>
 
     <div class="col s9">
-      <h6>
+      <h6 id="tel_E">
         87373581
       </h6>
     </div>
@@ -140,7 +141,7 @@
     </div>
 
     <div class="col s9">
-      <h6>
+      <h6 id="Dep_E">
         Chontales
       </h6>
     </div>
@@ -154,7 +155,7 @@
     </div>
       
     <div class="col s9">
-      <h6>
+      <h6 id="idioma_E">
         Español
       </h6>
     </div>
@@ -168,7 +169,7 @@
     </div>
         
     <div class="col s9">
-      <h6>
+      <h6 id="genero_E">
         Masculino
       </h6>
     </div>
@@ -182,8 +183,8 @@
     </div>
           
     <div class="col s9">
-      <h6>
-        eliabjselvacruz51@gmail.com
+      <h6 id="correo_E">
+        
       </h6>
     </div>
 
@@ -239,7 +240,62 @@
     }
     );
   </script>
-  <script src="/js/RegistroEstudiante.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+    authDomain: "busca-un-tutor.firebaseapp.com",
+    databaseURL: "https://busca-un-tutor.firebaseio.com",
+    projectId: "busca-un-tutor",
+    storageBucket: "busca-un-tutor.appspot.com",
+    messagingSenderId: "356130835030"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script>
+    function Resultado() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().getRedirectResult().then(function(result) {
+      })
+    }
+    
+    //Guardando datos del usuario registrado con cuenta de google
+    function guardaDatos(user) {
+    var usuario ={
+        uid:user.uid,
+        nombre : user.displayName,
+        email: user.email,
+        foto: user.photoURL,
+        telefono: user.phoneNumber
+    }
+    firebase.database().ref("clientes/" + user.uid).set(usuario);
+}
+    function cargarUsuario(resultado) {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user != null) {
+          console.log(user);
+          var displayName = user.displayName;
+          var userPhoto = user.photoURL;
+          var email = user.email;
+
+          document.querySelector('#nombre_g').textContent=user.displayName;
+          document.querySelector('#name_E').textContent=user.displayName;
+          //document.querySelector('#tel_E').textContent=user.phoneNumber;
+          document.querySelector('#img_User').src = user.photoURL;
+          document.querySelector('#correo_E').textContent=user.email;
+          
+          console.log(user.uid);
+          guardaDatos(user);             
+        }
+    });
+}
+  cargarUsuario(Resultado);
+
+  </script>
+<!-- <script src="../../js/Sesion.js"></script> -->
 </body>
 
 </html>
