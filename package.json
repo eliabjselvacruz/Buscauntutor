@@ -1,26 +1,23 @@
 {
-  "name": "webrtc-video-conference-tutorial",
+  "name": "chat",
   "version": "1.0.0",
-  "description": "This tutorial is divided in three versions:",
-  "main": "server.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Snackz010/streamingWRTC"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^4.15.4",
     "firebase": "^5.5.8",
     "socket.io": "^2.0.3"
+=======
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "nodemon": "^1.18.6",
+    "socket.io": "^2.1.1"
+>>>>>>> cd646d22d8e0a531d3327c508f27283fad9e0e24
   }
 }
