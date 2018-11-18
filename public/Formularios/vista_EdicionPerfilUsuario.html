@@ -26,6 +26,13 @@
           <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
 
+            <!-- Botón Página Principal -->
+            <li>
+              <a class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
+                <i class="small material-icons">home</i>
+              </a> 
+            </li> 
+
             <!-- Botón Reservar -->
             <li>
                 <a href="#" class="btn blue waves-effect waves-light btn-small z-depth-3">
@@ -44,9 +51,8 @@
 
             <!-- Botón Salir -->
             <li>
-              <a href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
-                <i class="small material-icons left">exit_to_app</i>
-                Salir
+              <a id="btn_salir" href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
+                <i class="small material-icons">exit_to_app</i>
               </a>
             </li>
 
@@ -76,7 +82,7 @@
   <div class="col s2 blue lighten-4 z-depth-4"">
 
     <div class="section">
-        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
+        <a id="btn_toperfil" class="btn green lighten-1 z-depth-4 col s12" href="#">
           <i class="small material-icons right">account_box</i>
           Perfil
         </a>
@@ -90,7 +96,7 @@
     </div>
     <br>
     <div class="section">
-        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
+        <a id="btn_cambioC" class="btn green lighten-1 z-depth-4 col s12" href="#">
           <i class="small material-icons right">fingerprint</i>
           Contraseña
         </a>
@@ -135,7 +141,6 @@
     <div class="c">
         <div class="row">
             <div class="center col s12 m12 l12 card-panel z-depth-5">
-    
               <!-- Control Nombres -->
               <div class="input-field col s6">
                   <input type="text" id="nomre_e" class="" required>
@@ -265,6 +270,8 @@
     );
   </script>
   <script src="/js/RegistroEstudiante.js"></script>
+  <script src="../../js/btnsPerfil.js"></script>
+  <script src="../../js/conf.js">  </script>
 </body>
 
 </html>
