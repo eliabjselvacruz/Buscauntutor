@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil Estudiante</title>
+  <title>Reservar Tutor</title>
   <!-- CDN de los íconos -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CDN Materialize CSS  -->
@@ -22,8 +22,6 @@
     <nav class="blue">
       <div class="nav-wrapper">
         <div class="">
-        
-        <div class="">
           <a href="#" class="brand-logo">Busca Tutor</a>
           <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
@@ -34,15 +32,7 @@
                 <i class="small material-icons">home</i>
               </a> 
             </li> 
-
-            <!-- Botón Reservar -->
-            <li>
-                <a href="#" class="btn blue waves-effect waves-light btn-small z-depth-3">
-                  <i class="small material-icons left">local_activity</i>
-                  Reservar
-                </a>
-            </li>
-
+            
             <!-- Botón Perfil -->
             <li>
                 <a href="#" class="btn red lighten-1 waves-effect waves-light btn-small z-depth-3">
@@ -53,7 +43,7 @@
 
             <!-- Botón Salir -->
             <li>
-              <a id="btn_salir" href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
+              <a href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
                 <i class="small material-icons">exit_to_app</i>
               </a>
             </li>
@@ -80,152 +70,86 @@
       <li><a class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
   </ul>
 
-<div class="row" id="bmm">
-  <div class="col s2 blue lighten-4 z-depth-4"">
-
-    <div class="section">
-        <a id="btn_toperfil" class="btn green darken-2 z-depth-4 col s12" href="#">
-          <i class="small material-icons right">account_box</i>
-          Perfil
-        </a>
-    </div>
-    <br>
-    <div class="section">
-        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
-          <i class="small material-icons right">settings</i>
-          Ajustes
-        </a>
-    </div>
-    <br>
-    <div class="section">
-      <a id="btn_cambioC" class="btn green lighten-1 z-depth-4 col s12" href="#">
-        <i class="small material-icons right">fingerprint</i>
-        Contraseña
-      </a>
-    </div>  
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  </div>
-
-  <div class="col s10">
-    <div class=" center section z-depth-4">
-      <h5>
-        Perfil de Estudiante
-      </h5>
-    </div>
-  </div>
-
-  <div class="col s4">
-    <div class="blue darken-1 white-text center">
-      <h5 id="nombre_g">
-        Eliab Selva
-      </h5>
-    </div>
-    <div class="card">
-      <div class="card-image">
-        <img id="img_User"  alt="imagen">
-        <span class="card-title"><button class="btn green waves-effect waves-light z-depth-4">Editar</button></span>
-        <span class="card-title">
-          <button class="btn green waves-effect waves-light z-depth-4">
-            <i class="small material-icons right">edit</i>
-            Editar
-          </button>
-        </span>
+<div class="row">
+  <div class="col s3 m3 l3">
+      <div class="deep-orange accent-2 white-text center section z-depth-4">
+        <h5>
+          Filtros
+        </h5>
       </div>
-    </div>
-  </div>
 
-  <div class="col s6">
-    <div class="blue darken-1 white-text center">
+  <!-- Formulario -->
+  <div class="center col s12 m12 l12 card-panel z-depth-4">
+      
+    <!-- Control Materia -->
+    <select class="input-field col s12" id="materia">
+      <option value="" disabled selected>Elije la materia</option>
+      <option value="">Español</option>
+      <option value="">Biologia</option>
+      <option value="">Ingles</option>
+      <option value="">Física</option>
+      <option value="">Química</option>
+      <option value="">Matemática</option>
+      <option value="">Filosofía</option>
+      <option value="">Sociología</option>
+      <option value="">Informática</option>
+      <option value="">Geografía</option>
+      <label for="materia">Ciudad</label>
+    </select>
+    
+    <!-- Control Nivel Academico -->
+    <select class="input-field col s12" id="nivel">
+      <option value="" disabled selected>Elije el nivel académico</option>
+      <option value="">Primaria</option>
+      <option value="">Secundaria</option>
+      <option value="">Universitario</option>
+      <label for="nivel">Nivel</label>
+    </select>
+
+    <!-- Control Tipo Tutor -->
+    <select class="input-field col s12" id="tipo">
+      <option value="" disabled selected>Elije el tipo de tutor</option>
+      <option value="">Estudiante Universitario</option>
+      <option value="">Profesional</option>
+      <label for="tipo">tipo</label>
+    </select>
+
+    <!-- Botón Limpiar Selecciones -->
+    <button id="btn_limpiar" class="btn btn-small waves-effect waves-light green lighten-1 z-depth-5" type="submit" name="action">
+      <i class="small material-icons right">delete</i>
+      Limpiar
+    </button>
+    <br>
+    <br>
+    <!-- Botón Buscar -->
+    <button id="btn_buscar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
+      <i class="small material-icons right">search</i>
+      Buscar
+    </button>
+    <br>
+    <br>
+  </div>
+</div>
+
+  <div class="col s9 m9 l9">
+    <div class="indigo darken-1 white-text z-depth-4 center section">
       <h5>
-        Datos Generales
+        Docentes
       </h5>
     </div>
-
-    <div class="col s3">
-      <h6>
-        <b>   
-          Nombre:
-        </b>
-      </h6>
+    <div class="center col s12 m12 l12 card-panel z-depth-4">
+      <h1>Esperando la parte de klissman y favio</h1>
     </div>
-
-    <div class="col s9">
-      <h6 id="name_E">
-        Eliab Javier Selva Cruz
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Telefono:
-        </b>
-      </h6>
-    </div>
-
-    <div class="col s9">
-      <h6 id="tel_E">
-        87373581
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Depertamento:
-        </b>
-      </h6>
-    </div>
-
-    <div class="col s9">
-      <h6 id="Dep_E">
-        Chontales
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Idioma:
-        </b>
-      </h6>
-    </div>
-      
-    <div class="col s9">
-      <h6 id="idioma_E">
-        Español
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Género:
-        </b>
-      </h6>
-    </div>
-        
-    <div class="col s9">
-      <h6 id="genero_E">
-        Masculino
-      </h6>
-    </div>
-
-    <div class="col s3">
-      <h6>
-        <b>
-          Correo:
-        </b>
-      </h6>
-    </div>
-          
-    <div class="col s9">
-      <h6 id="correo_E">
-        eliabjselvacruz51@gmail.com
-      </h6>
-    </div>
-
   </div>
+
+  <div class="col s12 m4 l4">
+    <!-- Botón Buscar -->
+    <button id="btn_buscar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
+      <i class="small material-icons right">list</i>
+      Mostrar más tutores
+    </button>
+  </div>
+
 </div>
 
 <!-- Pie de Página -->
@@ -277,23 +201,7 @@
     }
     );
   </script>
-
-  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
-    authDomain: "busca-un-tutor.firebaseapp.com",
-    databaseURL: "https://busca-un-tutor.firebaseio.com",
-    projectId: "busca-un-tutor",
-    storageBucket: "busca-un-tutor.appspot.com",
-    messagingSenderId: "356130835030"
-  };
-  firebase.initializeApp(config);
-</script>
-<script src="../../js/btnsPerfil.js"></script>
-<script src="../../js/conf.js">  </script>
-<!-- <script src="../../js/Sesion.js"></script> -->
+  <script src="/js/RegistroEstudiante.js"></script>
 </body>
 
 </html>

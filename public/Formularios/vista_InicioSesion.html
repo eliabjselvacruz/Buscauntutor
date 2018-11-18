@@ -21,17 +21,24 @@
   <div class=" navbar-fixed">
     <nav class="blue">
       <div class="nav-wrapper">
-        <div class="container">
+        <div class="">
           <a href="#" class="brand-logo">Busca Tutor</a>
           <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
 
             <!-- Botón Página Principal -->
-            <li><button class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >Inicio</button></li>
+            <li>
+              <a class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
+                <i class="small material-icons">home</i>
+              </a> 
+            </li> 
             
             <li>
               <!-- Botón Menú Opciones-->
-              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>Menú</a>
+              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>
+                <i class="small material-icons left">menu</i>
+                Menú
+              </a>
             
               <!-- Menú del botón -->
               <ul id='dropdown1' class='dropdown-content'>
@@ -64,8 +71,8 @@
 
   <br>
 
-  <!-- Formulario -->
-  <div id="frm_Sesion" class="container">
+ <!-- Formulario -->
+ <div id="frm_Sesion" class="container">
     <div class="row">
         <div class="center col s12 m12 l12 card-panel z-depth-5">
 
@@ -76,7 +83,6 @@
             <div class="input-field col s6">
                 <input type="text" id="usuario" class="">
                 <label for="usuario">Ingrese su usuario</label>
-                <p id="nombreu"></p>
             </div>
 
             <!-- Control Contraseña -->
@@ -86,10 +92,16 @@
             </div>
 
             <!-- Botón de Inicio de Sesión -->
-            <button id="btn_login" class="btn btn-large waves-effect waves-light blue z-depth-5" type="submit" name="action">Iniciar sesión</button>
+            <button id="btn_login" class="btn btn-large waves-effect waves-light blue z-depth-5" type="submit" name="action">
+              <i class="small material-icons left">account_box</i>
+              Iniciar sesión
+            </button>
             
             <!-- Botón de Inicio de Sesión con Google-->
-            <button id="btn_google" class="btn btn-large waves-effect waves-light red z-depth-5" type="submit" name="action">Iniciar sesión con Google</button>
+            <button id="btn_google" class="btn btn-large waves-effect waves-light red z-depth-5" type="submit" name="action">
+              <i class="small material-icons left">account_box</i>
+              Iniciar sesión con Google              
+            </button>
             <br>
             <br>
 
@@ -116,7 +128,7 @@
     </div>
     <div class="footer-copyright center">
       <div class="container">
-        &copy; 2018 Copyright Nombre Busca un Tutor
+        &copy; 2018 Copyright Nombre Busca un Tutor - Todos los derechos reservados.
       </div>
     </div>
   </footer>
