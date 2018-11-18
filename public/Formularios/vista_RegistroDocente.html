@@ -49,7 +49,7 @@
 
             <!-- Botón Inicio Sesión -->
             <li>
-              <a class="btn red lighten-1 waves-effect waves-light z-depth-3" href="#" >
+              <a id="inicio_S" class="btn red lighten-1 waves-effect waves-light z-depth-3" href="#" >
                 <i class="small material-icons left">account_box</i>
                 Iniciar sesión
               </a>
@@ -70,11 +70,11 @@
         </h3>
       </div>
 
-      <li><a class="btn pink lighten-1 z-depth-4" href="#">Página Principal</a></li>
+      <li><a id="pag_ini" class="btn pink lighten-1 z-depth-4" href="#">Página Principal</a></li>
       <li><a class="btn blue z-depth-4" href="#">Registro Estudiante</a></li>
-      <li><a class="btn blue z-depth-4" href="#">Registro Docente</a></li>
+      <li><a id="registro_T" class="btn blue z-depth-4" href="#">Registro Docente</a></li>
       <li><a class="btn green z-depth-4" href="#">Subscribirse</a></li>
-      <li><a class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
+      <li><a id="inicio_S" class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
   </ul>
 
   <!-- Formulario -->
@@ -86,55 +86,61 @@
             <h3 class="center cyan white-text">Registro Docente</h3>
 
             <!-- Control Nombres -->
-            <div class="input-field col s6">
+            <div class="input-field col s12 m6 l6">
                 <input type="text" id="nombres_t" class="">
                 <label for="nombres_t">Ingrese sus nombres</label>
             </div>
 
             <!-- Control Apellidos -->
-            <div class="input-field col s6">
+            <div class="input-field col s12 m6 l6">
                 <input type="text" id="apellidos_t" class="">
                 <label for="apellidos_t">Ingrese sus apellidos</label>
             </div>
 
             <!-- Control Correo Electrónico -->
-            <div class="input-field col s6">
+            <div class="input-field col s12 m6 l6">
               <input type="email" id="correo_t" class="">
               <label for="correo_t">Ingrese su correo electrónico</label>
             </div>
 
             <!-- confirmando el correo electrónico -->
-          <div class="input-field col s6">
+          <div class="input-field col s12 m6 l6">
             <input type="email" id="correo_t_2" class="">
              <label for="correo_t_2">Confirme su correo electrónico</label>
           </div>
 
             <!-- Control Contraseña -->
-            <div class="input-field col s6">
+            <div class="input-field col s12 m6 l6">
                 <input   type="password" id="clave_t" class="">
                 <label for="clave_t">Contraseña</label>
             </div>
 
             <!-- Control Verificación Contraseña -->
-            <div class="input-field col s6">
+            <div class="input-field col s12 m6 l6">
                 <input   type="password" id="clave_t_2" class="">
                 <label for="clave_t_2">Confirme su contraseña</label>
             </div>
 
             <!-- Control Telefono -->
-            <div class="input-field col s6">
+            <div class="input-field col s12 m6 l6">
                 <input   type="number" id="telefono_t" class="" min="0">
                 <label for="telefono_t">Teléfono</label>
             </div>
 
             <!-- Control Experiencia -->
-            <div class="input-field col s6">
+            <div class="input-field col s12 m6 l6">
                 <input   type="number" id="experiencia_t" class="" min="0" max="50">
                 <label for="experiencia_t">Experiencia</label>
             </div>
 
+            <!-- Control Identificación -->
+            <div class="input-field col s12 m6 l6">
+              <input type="text" id="identificacion_t" class="">
+              <label for="identificacion_t">Ingrese su número de cédula</label>
+            </div>
+
             <!-- Control Idioma -->
-            <select class="input-field col s6" id="idioma_t">
+            <select class="input-field col s12 m6 l6" id="idioma_t">
               <option value="" disabled selected>Selecciona su idioma</option>
               <option value="Español">Español</option>
               <option value="Ingles">Ingles</option>
@@ -142,7 +148,7 @@
             </select>
 
             <!-- Control Género -->
-            <select class="input-field col s6" id="genero_t">
+            <select class="input-field col s12 m6 l6" id="genero_t">
               <option value="" disabled selected>Seleccione su género</option>
               <option value="Masculino">Masculino</option>
               <option value="Femenino">Femenino</option>
@@ -151,7 +157,7 @@
             </select>
 
             <!-- Control Ciudad -->
-            <select class="input-field col s12" id="ciudad_ts">
+            <select class="input-field col s12 m6 l6" id="ciudad_ts">
                 <option value="" disabled selected>Selecciona su departamento</option>
                 <option value="Atlántico Norte">Atlántico Norte</option>
                 <option value="Atlántico Sur">Atlántico Sur</option>
@@ -174,7 +180,7 @@
               </select>
 
               <!-- Botón Hoja de vida -->
-              <div class="file-field input-field col s6">
+              <div class="file-field input-field col s12 m6 l6">
                   <div class="btn">
                     <span>Hoja de Vida</span>
                     <input id="CV"type="file" multiple>
@@ -185,7 +191,7 @@
               </div>
 
               <!-- Botón Cedula -->
-              <div class="file-field input-field col s6">
+              <div class="file-field input-field col s12 m6 l6">
                   <div class="btn">
                     <span>Cedula</span>
                     <input id="inpCedula" type="file">
@@ -278,6 +284,7 @@
 </script>
 
   <script src="/js/RegistroDocente.js"></script>
+  <script src="/js/btnsIndex.js"></script>
 </body>
 
 </html>
