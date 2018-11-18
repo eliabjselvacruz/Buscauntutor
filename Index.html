@@ -32,13 +32,19 @@
             
               <!-- Menú del botón -->
               <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#">Registrarse como Estudiante</a></li>
-                <li><a href="#">Registrarse como Docente</a></li>
+                <li>
+                  <a id="registro_E" href="#">Registrarse como Estudiante</a>
+                </li>
+                <li>
+                  <a id="registro_T" href="#">Registrarse como Docente</a>
+                </li>
               </ul>
             </li>
     
             <!-- Botón Inicio Sesión -->
-            <li><button class="btn red lighten-1 waves-effect waves-light z-depth-3" href="#" >Inicio Sesión</button></li>
+            <li>
+              <button id="inicio_S" class="btn red lighten-1 waves-effect waves-light z-depth-3" href="#" >Inicio Sesión</button>
+            </li>
           
           </ul>
         </div>
@@ -229,6 +235,9 @@
     );
 	$('.parallax').parallax();
   </script>
+  
+  
+  <script src="/js/btnsIndex.js"></script>
 </body>
 
 </html>

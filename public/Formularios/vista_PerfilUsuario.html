@@ -46,7 +46,7 @@
 
             <!-- Botón Salir -->
             <li>
-              <a href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
+              <a id="btn_salir" href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
                 <i class="small material-icons left">exit_to_app</i>
                 Salir
               </a>
@@ -78,7 +78,7 @@
   <div class="col s2 blue lighten-4 z-depth-4"">
 
     <div class="section">
-        <a class="btn green darken-2 z-depth-4 col s12" href="#">
+        <a id="btn_toperfil" class="btn green darken-2 z-depth-4 col s12" href="#">
           <i class="small material-icons right">account_box</i>
           Perfil
         </a>
@@ -92,7 +92,7 @@
     </div>
     <br>
     <div class="section">
-      <a class="btn green lighten-1 z-depth-4 col s12" href="#">
+      <a id="btn_cambioC" class="btn green lighten-1 z-depth-4 col s12" href="#">
         <i class="small material-icons right">fingerprint</i>
         Contraseña
       </a>
@@ -110,15 +110,14 @@
 
   <div class="col s4">
     <div class="blue darken-1 white-text center">
-      <p id="nombre_g">
+      <h5 id="nombre_g">
         Klissman Espinoza
-      </p>
+      </h5>
     </div>
     <div class="card">
       <div class="card-image">
         <img id="img_User"  alt="imagen">
         <span class="card-title"><button class="btn green waves-effect waves-light z-depth-4">Editar</button></span>
-        <img src="" alt="imagen">
         <span class="card-title">
           <button class="btn green waves-effect waves-light z-depth-4">
             <i class="small material-icons right">edit</i>
@@ -286,47 +285,8 @@
   };
   firebase.initializeApp(config);
 </script>
-
-  <script>
-    function Resultado() {
-      var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().getRedirectResult().then(function(result) {
-      })
-    }
-    
-    //Guardando datos del usuario registrado con cuenta de google
-    function guardaDatos(user) {
-    var usuario ={
-        uid:user.uid,
-        nombre : user.displayName,
-        email: user.email,
-        foto: user.photoURL,
-        telefono: user.phoneNumber
-    }
-    firebase.database().ref("clientes/" + user.uid).set(usuario);
-}
-    function cargarUsuario(resultado) {
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user != null) {
-          console.log(user);
-          var displayName = user.displayName;
-          var userPhoto = user.photoURL;
-          var email = user.email;
-
-          document.querySelector('#nombre_g').textContent=user.displayName;
-          document.querySelector('#name_E').textContent=user.displayName;
-          //document.querySelector('#tel_E').textContent=user.phoneNumber;
-          document.querySelector('#img_User').src = user.photoURL;
-          document.querySelector('#correo_E').textContent=user.email;
-          
-          console.log(user.uid);
-          guardaDatos(user);             
-        }
-    });
-}
-  cargarUsuario(Resultado);
-
-  </script>
+<script src="../../js/btnsPerfil.js"></script>
+<script src="../../js/conf.js">  </script>
 <!-- <script src="../../js/Sesion.js"></script> -->
 </body>
 

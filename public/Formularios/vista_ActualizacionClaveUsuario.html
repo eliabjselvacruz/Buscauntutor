@@ -44,7 +44,7 @@
 
             <!-- Botón Salir -->
             <li>
-              <a href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
+              <a id="btn_salir" href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
                 <i class="small material-icons left">exit_to_app</i>
                 Salir
               </a>
@@ -76,7 +76,7 @@
   <div class="col s2 blue lighten-4 z-depth-4"">
 
     <div class="section">
-        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
+        <a id="btn_toperfil" class="btn green lighten-1 z-depth-4 col s12" href="#">
           <i class="small material-icons right">account_box</i>
           Perfil
         </a>
@@ -90,7 +90,7 @@
     </div>
     <br>
     <div class="section">
-        <a class="btn green darken-2 z-depth-4 col s12" href="#">
+        <a id="btn_cambioC" class="btn green darken-2 z-depth-4 col s12" href="#">
           <i class="small material-icons right">fingerprint</i>
           Contraseña
         </a>
@@ -108,7 +108,7 @@
 
   <div class="col s4">
     <div class="blue darken-1 white-text center">
-      <h5>
+      <h5 id="nombre_g">
         Eliab Selva
       </h5>
     </div>
@@ -217,7 +217,25 @@
     }
     );
   </script>
-  <script src="/js/RegistroEstudiante.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+    authDomain: "busca-un-tutor.firebaseapp.com",
+    databaseURL: "https://busca-un-tutor.firebaseio.com",
+    projectId: "busca-un-tutor",
+    storageBucket: "busca-un-tutor.appspot.com",
+    messagingSenderId: "356130835030"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script src="../../js/RegistroEstudiante.js"></script>
+  <script src="../../js/btnsPerfil.js"></script>
+  <script src="../../js/conf.js">  </script>
+  
 </body>
 
 </html>
