@@ -22,7 +22,11 @@ function Resultado() {
         console.log(user);
     
         document.querySelector('#nombre_g').textContent=user.displayName;
+
+
+        try{
         document.querySelector('#name_E').textContent=user.displayName;
+         }catch(ex){}
         //document.querySelector('#tel_E').textContent=user.phoneNumber;
         document.querySelector('#img_User').src = user.photoURL;
         document.querySelector('#correo_E').textContent=user.email;
