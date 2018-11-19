@@ -57,6 +57,7 @@ Registrar.addEventListener('click',function () {
 
  function saveData(id,nombres,apellidos,correo,telefono,experiencia,idioma,sexo,departamento,foto) {
     tutor ={
+        id : id, //Cedula,
         nombres : nombres,
         apellidos : apellidos,
         correo: correo,
