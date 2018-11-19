@@ -5,6 +5,7 @@ var nombres = obtVal('nombres_t');
 var apellidos = obtVal('apellidos_t');
 var clave = obtVal('clave_t');
 var confclave = obtVal('clave_t_2');
+var nCedula  =  obtVal("identificacion_t");
 var telefono = obtVal('telefono_t');
 var Experiencia = obtVal('experiencia_t');
 var idioma = obtVal('idioma_t');
@@ -20,9 +21,9 @@ var Registrar = document.getElementById('btnRegistro');
 
 //Authenticando al tutor por medio de su email y su contraseña.
 Registrar.addEventListener('click',function () {
-    if (correo === confcorreo) {
+    if (correo = confcorreo) {
         
-        if (clave === confclave) {
+        if (clave = confclave) {
 
             firebase.auth().createUserWithEmailAndPassword(correo.value, clave.value).catch(function(error) {
                 // Handle Errors here.
@@ -39,25 +40,33 @@ Registrar.addEventListener('click',function () {
                 });
             });
         
-         }else if ((clave === null) |(confclave === null)){
+         }else if ((clave.value === confclave.value)){
         alert("Las contraseñas no coinciden, intenta escribirlos nuevamente");
     }
         
         // ...
-    }else if((correo === null)|(confcorreo === null)){
+    }else if(correo.value === confcorreo.value){
         alert("Los correos no coinciden, intenta escribirlos nuevamente");
     }
 });
 
 //Guardando los datos del docente
 Registrar.addEventListener('click',function () {
-    saveData("@cantillano26",nombres.value,apellidos.value,correo.value,telefono.value,
-    Experiencia.value,idioma.value,sexo.value,departamento.value,null);
+    if (nCedula.value === "" || correo.value === ""){
+        alert("Estás loco?, tenés campos vacios, no podés registrarte");
+    }
+    else{
+
+        saveData(nCedula.value,nombres.value,apellidos.value,correo.value,telefono.value,
+        Experiencia.value,idioma.value,sexo.value,departamento.value)
+
+    }
+    
 });
 
- function saveData(id,nombres,apellidos,correo,telefono,experiencia,idioma,sexo,departamento,foto) {
+ function saveData(id,nombres,apellidos,correo,telefono,experiencia,idioma,sexo,departamento) {
     tutor ={
-        id : id, //Cedula,
+        cedula : id, //Cedula
         nombres : nombres,
         apellidos : apellidos,
         correo: correo,
@@ -65,8 +74,7 @@ Registrar.addEventListener('click',function () {
         experiencia: experiencia,
         idioma : idioma,
         sexo: sexo,
-        departamento: departamento,
-        foto: foto
+        departamento: departamento
 
     }
     firebase.database().ref('tutores/'+ id).set(tutor);

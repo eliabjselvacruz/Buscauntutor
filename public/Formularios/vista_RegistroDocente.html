@@ -87,55 +87,55 @@
 
             <!-- Control Nombres -->
             <div class="input-field col s12 m6 l6">
-                <input type="text" id="nombres_t" class="">
+                <input type="text" id="nombres_t" class="" required>
                 <label for="nombres_t">Ingrese sus nombres</label>
             </div>
 
             <!-- Control Apellidos -->
             <div class="input-field col s12 m6 l6">
-                <input type="text" id="apellidos_t" class="">
+                <input type="text" id="apellidos_t" class="" required>
                 <label for="apellidos_t">Ingrese sus apellidos</label>
             </div>
 
             <!-- Control Correo Electrónico -->
             <div class="input-field col s12 m6 l6">
-              <input type="email" id="correo_t" class="">
+              <input type="email" id="correo_t" class="" required>
               <label for="correo_t">Ingrese su correo electrónico</label>
             </div>
 
             <!-- confirmando el correo electrónico -->
           <div class="input-field col s12 m6 l6">
-            <input type="email" id="correo_t_2" class="">
+            <input type="email" id="correo_t_2" class="" required>
              <label for="correo_t_2">Confirme su correo electrónico</label>
           </div>
 
             <!-- Control Contraseña -->
             <div class="input-field col s12 m6 l6">
-                <input   type="password" id="clave_t" class="">
+                <input   type="password" id="clave_t" class="" required>
                 <label for="clave_t">Contraseña</label>
             </div>
 
             <!-- Control Verificación Contraseña -->
             <div class="input-field col s12 m6 l6">
-                <input   type="password" id="clave_t_2" class="">
+                <input   type="password" id="clave_t_2" class="" required>
                 <label for="clave_t_2">Confirme su contraseña</label>
             </div>
 
             <!-- Control Telefono -->
             <div class="input-field col s12 m6 l6">
-                <input   type="number" id="telefono_t" class="" min="0">
+                <input   type="number" id="telefono_t" class="" min="0" required>
                 <label for="telefono_t">Teléfono</label>
             </div>
 
             <!-- Control Experiencia -->
             <div class="input-field col s12 m6 l6">
-                <input   type="number" id="experiencia_t" class="" min="0" max="50">
+                <input   type="number" id="experiencia_t" class="" min="0" max="50" required>
                 <label for="experiencia_t">Experiencia</label>
             </div>
 
             <!-- Control Identificación -->
             <div class="input-field col s12 m6 l6">
-              <input type="text" id="identificacion_t" class="">
+              <input type="text" id="identificacion_t" class="" required>
               <label for="identificacion_t">Ingrese su número de cédula</label>
             </div>
 
@@ -283,8 +283,8 @@
   firebase.initializeApp(config);
 </script>
 
-  <script src="/js/RegistroDocente.js"></script>
-  <script src="/js/btnsIndex.js"></script>
+  <script src="/RegistroDocente.js"></script>
+  <script src="/btnsIndex.js"></script>
 </body>
 
 </html>
