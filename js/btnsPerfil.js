@@ -11,3 +11,7 @@
   document.getElementById('btn_toperfil').addEventListener('click',function() {
     document.location.href = "vista_PerfilUsuario.html";
   });
+
+  document.getElementById('btn_Ajustes').addEventListener('click',function() {
+    document.location.href = "vista_EdicionPerfilUsuario.html";
+  });

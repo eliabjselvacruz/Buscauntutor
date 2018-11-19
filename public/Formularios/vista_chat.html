@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <!-- Estilos propios -->
   <link rel="stylesheet" href="css/estilos.css">
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,29 +23,22 @@
   <div class=" navbar-fixed">
     <nav class="blue">
       <div class="nav-wrapper">
-        <div class="">
+        <div class="container">
           <a href="#" class="brand-logo">Busca Tutor</a>
           <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
 
             <!-- Botón Página Principal -->
-            <li>
-              <a id="home" class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
-                <i class="small material-icons">home</i>
-              </a> 
-            </li> 
+            <li><button class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >Inicio</button></li>
             
             <li>
               <!-- Botón Menú Opciones-->
-              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>
-                <i class="small material-icons left">menu</i>
-                Menú
-              </a>
+              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>Menú</a>
             
               <!-- Menú del botón -->
               <ul id='dropdown1' class='dropdown-content'>
                 <li><a href="#">Registrarse como Estudiante</a></li>
-                <li id="registro_T"><a href="#">Registrarse como Docente</a></li>
+                <li><a href="#">Registrarse como Docente</a></li>
               </ul>
             </li>
 
@@ -71,46 +66,37 @@
 
   <br>
 
- <!-- Formulario -->
- <div id="frm_Sesion" class="container">
+  <div class="container">
     <div class="row">
-        <div class="center col s12 m12 l12 card-panel z-depth-5">
+      <h1 class="center z-depth-5">Chat de Buscauntutor.com <small class="orange-text">Creado por Snackz</small></h1>
+      <div id="chatContent" class="col s8 orange center section z-depth-5" style="height: 70%;">
+        <h6>
+            Chat
+        </h6>
+        <div id="chat" align="left" ></div>
+      </div>
 
-            <!-- Encabezado -->
-            <h3 class="center cyan white-text">Inicio Sesión</h3>
-
-            <!-- Control Usuario -->
-            <div class="input-field col s6">
-                <input type="text" id="usuario" class="">
-                <label for="usuario">Ingrese su usuario</label>
-            </div>
-
-            <!-- Control Contraseña -->
-            <div class="input-field col s6">
-                <input   type="password" id="clave_u" class="">
-                <label for="clave_u">Contraseña</label>
-            </div>
-
-            <!-- Botón de Inicio de Sesión -->
-            <button id="btn_login" class="btn btn-large waves-effect waves-light blue z-depth-5" type="submit" name="action">
-              <i class="small material-icons left">account_box</i>
-              Iniciar sesión
-            </button>
-            
-            <!-- Botón de Inicio de Sesión con Google-->
-            <button id="btn_google" class="btn btn-large waves-effect waves-light red z-depth-5" type="submit" name="action">
-              <i class="small material-icons left">account_box</i>
-              Iniciar sesión con Google              
-            </button>
-            <br>
-            <br>
-
+      <form id="sendMessage">
+        <div class="input-field col s8">
+          <input type="text" id="message" class="">
+          <label>Ingrese su mensaje</label>
         </div>
+        <div class="input-field col s4">
+          <button class="btn green lighten-1 waves-effect waves-light btn-small z-depth-5" type="submit" >Enviar</button>
+          <a class="btn green lighten-1 waves-light btn-small z-depth-5" href="https://plus.google.com/hangouts/_?gid=APP_ID" target="_blank">
+            <!-- <img src="https://ssl.gstatic.com/s2/oz/images/stars/hangout/1/gplus-hangout-15x79-normal.png" -->
+              ir a salon
+          </a>
+        </div>
+      </form>
+
+      
+
     </div>
-</div>
+  </div>
 
 <!-- Pie de Página -->
-<footer class="page-footer blue darken-4">
+  <footer class="page-footer blue darken-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -128,7 +114,7 @@
     </div>
     <div class="footer-copyright center">
       <div class="container">
-        &copy; 2018 Copyright Nombre Busca un Tutor - Todos los derechos reservados.
+        &copy; 2018 Copyright Nombre Busca Tutor
       </div>
     </div>
   </footer>
@@ -153,26 +139,44 @@
       belowOrigin: false, 
       alignment: 'left', 
       stopPropagation: false 
-    }
-    );
+    });
   </script>
 
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
-    authDomain: "busca-un-tutor.firebaseapp.com",
-    databaseURL: "https://busca-un-tutor.firebaseio.com",
-    projectId: "busca-un-tutor",
-    storageBucket: "busca-un-tutor.appspot.com",
-    messagingSenderId: "356130835030"
-  };
-  firebase.initializeApp(config);
-</script>
-<!-- <script src="../../js/Sesion.js"></script> -->
-<script src="/InicioSesion.js"></script>
-<script></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+      authDomain: "busca-un-tutor.firebaseapp.com",
+      databaseURL: "https://busca-un-tutor.firebaseio.com",
+      projectId: "busca-un-tutor",
+      storageBucket: "busca-un-tutor.appspot.com",
+      messagingSenderId: "356130835030"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="/js/InicioSesion.js"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+  jQuery(function($){
+      var socket = io.connect();
+      var $messageForm = $('#sendMessage');
+      var $message = $('#message');
+      var $chat = $('#chat');
+
+      $messageForm.submit(function(e){
+          e.preventDefault();
+          if($message != '') socket.emit('sendMessage',$message.val());
+          $message.val('');
+      });
+
+      socket.on('newMessage',function(data){
+          $chat.append(' - '+data.msg+'<br/>');
+      });
+  });
+  </script>
 
 </body>
 </html>

@@ -11,7 +11,6 @@
   <!-- CDN Materialize CSS  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <!-- Estilos propios -->
-  <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
@@ -30,14 +29,14 @@
 
             <!-- Botón Página Principal -->
             <li>
-              <a class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
+              <a id="home" class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
                 <i class="small material-icons">home</i>
               </a> 
             </li> 
 
             <!-- Botón Reservar -->
             <li>
-                <a href="#" class="btn blue waves-effect waves-light btn-small z-depth-3">
+                <a id="reservar" href="#" class="btn blue waves-effect waves-light btn-small z-depth-3">
                   <i class="small material-icons left">local_activity</i>
                   Reservar
                 </a>
@@ -81,7 +80,7 @@
   </ul>
 
 <div class="row" id="bmm">
-  <div class="col s2 blue lighten-4 z-depth-4"">
+  <div class="col s2 blue lighten-4 z-depth-4">
 
     <div class="section">
         <a id="btn_toperfil" class="btn green darken-2 z-depth-4 col s12" href="#">
@@ -91,7 +90,7 @@
     </div>
     <br>
     <div class="section">
-        <a class="btn green lighten-1 z-depth-4 col s12" href="#">
+        <a id="btn_Ajustes" class="btn green lighten-1 z-depth-4 col s12" href="#">
           <i class="small material-icons right">settings</i>
           Ajustes
         </a>
@@ -291,8 +290,9 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="../../js/btnsPerfil.js"></script>
-<script src="../../js/conf.js">  </script>
+<script src="/btnsPerfil.js"></script>
+<script src="/conf.js">  </script>
+<script src="/redirecciones.js"></script>
 <!-- <script src="../../js/Sesion.js"></script> -->
 </body>
 
