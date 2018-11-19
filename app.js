@@ -36,6 +36,15 @@ app.get('/public/Formularios/vista_EdicionPerfilUsuario.html',function(req,res) 
     res.sendFile(__dirname+'/public/Formularios/vista_EdicionPerfilUsuario.html');
 });
 
+app.get('/public/Formularios/Index.html',function(req,res) {
+    res.sendFile('C:/Buscauntutor/Index.html');
+});
+
+app.get('/public/Formularios/vista_ReservaTutor.html',function(req,res) {
+    res.sendFile(__dirname+'/public/Formularios/vista_ReservaTutor.html');
+});
+
+
 io.sockets.on('connection',function(socket){
     socket.on('sendMessage',function(data){
         io.sockets.emit('newMessage',{msg:data});

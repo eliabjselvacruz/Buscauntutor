@@ -28,7 +28,7 @@
             
             <!-- Botón Página Principal -->
             <li>
-                <a class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
+                <a id="home" class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
                   <i class="small material-icons">home</i>
                 </a>
             </li>
@@ -42,14 +42,14 @@
 
               <!-- Menú del botón -->
               <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#">Registrarse como Estudiante</a></li>
+                <li><a  href="#">Registrarse como Estudiante</a></li>
                 <li><a href="#">Registrarse como Docente</a></li>
               </ul>
             </li>
 
             <!-- Botón Inicio Sesión -->
             <li>
-              <a class="btn red lighten-1 waves-effect waves-light z-depth-3" href="#" >
+              <a id="inicio_S" class="btn red lighten-1 waves-effect waves-light z-depth-3" href="#" >
                 <i class="small material-icons left">account_box</i>
                 Iniciar sesión
               </a>
@@ -277,7 +277,13 @@
   firebase.initializeApp(config);
 </script>
 
-  <script src="/js/RegistroDocente.js"></script>
+<script> 
+
+document.getElementById('home').addEventListener('click',function name(params) {
+  document.location.href="/"
+});
+</script>
+<script src="/RegistroDocente.js"></script>
 </body>
 
 </html>
