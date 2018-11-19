@@ -12,12 +12,17 @@ app.use(express.static(__dirname+'/recursos'));
 app.use(express.static(__dirname+'/js'));
 // app.use(express.static(__dirname+'/public/Formularios'));
 
+//Routes
 app.get('/', function(req, res){
     res.sendfile(__dirname+'/index.html');
 });
 
 app.get('/public/Formularios/vista_RegistroDocente.html',function(req,res) {
-   res.sendFile(__dirname+'/public/Formularios/vista_RegistroDocente.html'); 
+    try {
+        res.sendFile(__dirname+'/public/Formularios/vista_RegistroDocente.html'); 
+    } catch (error) {
+        res.sendFile('C:/Buscauntutor/public/Formularios/vista_RegistroDocente.html');
+    }
 });
 
 app.get('/public/Formularios/vista_InicioSesion.html',function(req,res) {
@@ -45,6 +50,8 @@ app.get('/public/Formularios/vista_ReservaTutor.html',function(req,res) {
 });
 
 
+
+//Message sockets
 io.sockets.on('connection',function(socket){
     socket.on('sendMessage',function(data){
         io.sockets.emit('newMessage',{msg:data});
