@@ -39,3 +39,11 @@ function guardaDatos(user) {
 btnGoogle.addEventListener('click', () =>{
     sesionGoogle();
 })*/
+
+document.getElementById('registro_T').addEventListener('click',function() {
+    document.location.href = "/public/Formularios/vista_RegistroDocente.html";
+});
+
+document.getElementById('home').addEventListener('click',function() {
+    document.location.href = "/"
+});
