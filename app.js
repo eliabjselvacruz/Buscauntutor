@@ -49,7 +49,9 @@ app.get('/public/Formularios/vista_ReservaTutor.html',function(req,res) {
     res.sendFile(__dirname+'/public/Formularios/vista_ReservaTutor.html');
 });
 
-
+app.get('/public/Formularios/vista_chat.html',function(req,res) {
+    res.sendFile(__dirname+'/public/Formularios/vista_chat.html');
+});
 
 //Message sockets
 io.sockets.on('connection',function(socket){

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio Sesión</title>
+  <!-- CDN de los íconos -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CDN Materialize CSS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Cuerpo del Sitio -->
+  
+  <!-- Barra de nvegación -->
+  <div class=" navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo">Busca Tutor</a>
+          <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+
+            <!-- Botón Página Principal -->
+            <li><button class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >Inicio</button></li>
+            
+            <li>
+              <!-- Botón Menú Opciones-->
+              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>Menú</a>
+            
+              <!-- Menú del botón -->
+              <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#">Registrarse como Estudiante</a></li>
+                <li><a href="#">Registrarse como Docente</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Barra de Navegación Lateral-->
+  <ul class="side-nav" id="mobile-menu">
+
+    <div class="blue white-text center section z-depth-4">
+      <h3>
+        MENÚ
+      </h3>
+    </div>
+
+    <li><a class="btn pink lighten-1 z-depth-4" href="#">Página Principal</a></li>
+    <li><a class="btn blue z-depth-4" href="#">Registro Estudiante</a></li>
+    <li><a class="btn blue z-depth-4" href="#">Registro Docente</a></li>
+    <li><a class="btn green z-depth-4" href="#">Subscribirse</a></li>
+    <li><a class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
+  </ul>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <h1 class="center z-depth-5">Chat de Buscauntutor.com <small class="orange-text">Creado por Snackz</small></h1>
+      <div id="chatContent" class="col s8 orange center section z-depth-5" style="height: 70%;">
+        <h6>
+            Chat
+        </h6>
+        <div id="chat" align="left" ></div>
+      </div>
+
+      <form id="sendMessage">
+        <div class="input-field col s8">
+          <input type="text" id="message" class="">
+          <label>Ingrese su mensaje</label>
+        </div>
+        <div class="input-field col s4">
+          <button class="btn green lighten-1 waves-effect waves-light btn-small z-depth-5" type="submit" >Enviar</button>
+          <a class="btn green lighten-1 waves-light btn-small z-depth-5" href="https://plus.google.com/hangouts/_?gid=APP_ID" target="_blank">
+            <!-- <img src="https://ssl.gstatic.com/s2/oz/images/stars/hangout/1/gplus-hangout-15x79-normal.png" -->
+              ir a salon
+          </a>
+        </div>
+      </form>
+
+      
+
+    </div>
+  </div>
+
+<!-- Pie de Página -->
+  <footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Contenido del footer</h5>
+          <p class="grey-text text-lighten-4">Contenido que puede ir en el pie de la pagina.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Vínculos</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center">
+      <div class="container">
+        &copy; 2018 Copyright Nombre Busca Tutor
+      </div>
+    </div>
+  </footer>
+
+  <!--  CDN jQuery -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <!-- CDN Materialize JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  <!-- Métodos de los componentes del Materialize -->
+  <script>
+    $("document").ready(function () {
+    $('select').material_select();
+    });
+    $(".button-collapse").sideNav();
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, 
+      hover: true, 
+      gutter: 0, 
+      belowOrigin: false, 
+      alignment: 'left', 
+      stopPropagation: false 
+    });
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+      authDomain: "busca-un-tutor.firebaseapp.com",
+      databaseURL: "https://busca-un-tutor.firebaseio.com",
+      projectId: "busca-un-tutor",
+      storageBucket: "busca-un-tutor.appspot.com",
+      messagingSenderId: "356130835030"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="/js/InicioSesion.js"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+  jQuery(function($){
+      var socket = io.connect();
+      var $messageForm = $('#sendMessage');
+      var $message = $('#message');
+      var $chat = $('#chat');
+
+      $messageForm.submit(function(e){
+          e.preventDefault();
+          if($message != '') socket.emit('sendMessage',$message.val());
+          $message.val('');
+      });
+
+      socket.on('newMessage',function(data){
+          $chat.append(' - '+data.msg+'<br/>');
+      });
+  });
+  </script>
+
+</body>
+</html>

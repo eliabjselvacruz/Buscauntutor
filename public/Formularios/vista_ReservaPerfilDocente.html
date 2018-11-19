@@ -11,7 +11,7 @@
   <!-- CDN Materialize CSS  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <!-- Estilos propios -->
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="/css/estilos.css">
 </head>
 
 <body>
@@ -69,88 +69,75 @@
       <li><a class="btn green z-depth-4" href="#">Subscribirse</a></li>
       <li><a class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
   </ul>
-
+<br>
 <div class="row">
-  <div class="col s3 m3 l3">
+  <div class="col s12 m3 l3">
       <div class="deep-orange accent-2 white-text center section z-depth-4">
         <h5>
-          Filtros
+          C$ 200 por Hora
         </h5>
       </div>
 
-  <!-- Formulario -->
-  <div class="center col s12 m12 l12 card-panel z-depth-4">
-      
-    <!-- Control Materia -->
-    <select class="input-field col s12" id="materia">
-      <option value="" disabled selected>Elije la materia</option>
-      <option value="">Español</option>
-      <option value="">Biologia</option>
-      <option value="">Ingles</option>
-      <option value="">Física</option>
-      <option value="">Química</option>
-      <option value="">Matemática</option>
-      <option value="">Filosofía</option>
-      <option value="">Sociología</option>
-      <option value="">Informática</option>
-      <option value="">Geografía</option>
-      <label for="materia">Ciudad</label>
-    </select>
+    <!-- Formulario -->
+    <div class="center col s12 m12 l12 card-panel z-depth-4">
+
+      <!-- Nombre Tutor -->
+      <h5>
+        Eliab Javier Selva Cruz
+      </h5>
+      <!-- Carrera -->
+      <h6>
+        Ing. Sistemas de Información
+      </h6>
+      <!-- Imagen Tutor -->
+      <div class="card">
+        <div class="card-image imgReserva">
+          <img id="img_User" class="imgReserva" src="https://fsmedia.imgix.net/44/13/42/4e/4fbc/410d/8b23/2e0998d75cbd/benedict-cumberbatch-as-doctor-strange-possessing-the-eye-of-agomotto-marvel.jpeg" alt="imagen">
+        </div>
+      </div>
+      <!-- Años Experiencia -->
+      <h6>
+        Tutor desde hace 15 años
+      </h6>
+
+      <div class="divider"></div>
+
+      <!-- Mterias -->
+      <h6 class="center">
+        <b>
+          51 Materias
+        </b>
+      </h6>
+      <!-- Horas de Tutoría Acumulada -->
+      <h6 class="center">
+        <b>
+          1051 Horas de tutorías
+        </b>
+      </h6>
+
+      <div class="divider"></div><br>
+
+      <!-- Botón Reservar -->
+      <button id="btn_buscar" class="btn btn-large waves-effect waves-light deep-green accent-2 z-depth-5" type="submit" name="action">
+        <i class="small material-icons right">star</i>
+        Reservar Tutoría
+      </button>
+      <br><br>
+    </div>
     
-    <!-- Control Nivel Academico -->
-    <select class="input-field col s12" id="nivel">
-      <option value="" disabled selected>Elije el nivel académico</option>
-      <option value="">Primaria</option>
-      <option value="">Secundaria</option>
-      <option value="">Universitario</option>
-      <label for="nivel">Nivel</label>
-    </select>
-
-    <!-- Control Tipo Tutor -->
-    <select class="input-field col s12" id="tipo">
-      <option value="" disabled selected>Elije el tipo de tutor</option>
-      <option value="">Estudiante Universitario</option>
-      <option value="">Profesional</option>
-      <label for="tipo">tipo</label>
-    </select>
-
-    <!-- Botón Limpiar Selecciones -->
-    <button id="btn_limpiar" class="btn btn-small waves-effect waves-light green lighten-1 z-depth-5" type="submit" name="action">
-      <i class="small material-icons right">delete</i>
-      Limpiar
-    </button>
-    <br><br>
-    <!-- Botón Buscar -->
-    <button id="btn_buscar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
-      <i class="small material-icons right">search</i>
-      Buscar
-    </button>
-    <br><br>
-
-  </div>
 </div>
 
-  <div class="col s9 m9 l9">
+  <div class="col s12 m9 l9">
     <div class="indigo darken-1 white-text z-depth-4 center section">
+      <!-- Título -->
       <h5>
-        Docentes
+        Datos Generales
       </h5>
     </div>
-
-    <!-- Listado Docentes -->
-    <div class="center col s12 m12 l12 card-panel z-depth-4">
-      <!-- Cargando los datos de los docentes disponibles para tutorias en una giftcard -->
-     <h1>Esperando la parte de klissman y favio</h1>
+    <!-- Datos Generales -->
+    <div class="center card-panel z-depth-4">
 
     </div>
-  </div>
-
-  <div class="col s12 m4 l4">
-    <!-- Botón Buscar -->
-    <button id="btn_buscar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
-      <i class="small material-icons right">list</i>
-      Mostrar más tutores
-    </button>
   </div>
 
 </div>
@@ -204,36 +191,7 @@
     }
     );
   </script>
-
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
-    authDomain: "busca-un-tutor.firebaseapp.com",
-    databaseURL: "https://busca-un-tutor.firebaseio.com",
-    projectId: "busca-un-tutor",
-    storageBucket: "busca-un-tutor.appspot.com",
-    messagingSenderId: "356130835030"
-  };
-  firebase.initializeApp(config);
-</script>
-
-  <script>
-    //Extrayendo datos de docentes desde firebase.
-    var datosTutoresref = firebase.database().ref('/tutores');
-    datosTutoresref.on("child_added",function (snapshot,Cedula) {
-    var u = snapshot.val();
-    console.log(
-      "Nombre: "+u.nombres,
-      "Correo: "+u.correo,
-      "N° Cédula: "+u.cedula);
-     
-    })
-  </script>
-
-  <script src="/RegistroEstudiante.js"></script>
-  <script src="/conf.js"></script>
+  <script src="/js/RegistroEstudiante.js"></script>
 </body>
 
 </html>
