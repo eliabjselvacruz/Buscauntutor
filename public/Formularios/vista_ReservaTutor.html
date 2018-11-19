@@ -139,6 +139,7 @@
 
     <!-- Listado Docentes -->
     <div class="center col s12 m12 l12 card-panel z-depth-4">
+<<<<<<< HEAD
 
       <!-- Targeta Docente -->
       <div class="col s12 m4 l4">
@@ -195,6 +196,10 @@
           </div>
         </div>       
       </div>
+=======
+      <!-- Cargando los datos de los docentes disponibles para tutorias en una giftcard -->
+     <h1>Esperando la parte de klissman y favio</h1>
+>>>>>>> 80504b272465da411ab546eda56db8a08d453deb
 
     </div>
   </div>
@@ -258,17 +263,36 @@
     }
     );
   </script>
-<<<<<<< HEAD
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+    authDomain: "busca-un-tutor.firebaseapp.com",
+    databaseURL: "https://busca-un-tutor.firebaseio.com",
+    projectId: "busca-un-tutor",
+    storageBucket: "busca-un-tutor.appspot.com",
+    messagingSenderId: "356130835030"
+  };
+  firebase.initializeApp(config);
+</script>
 
   <script>
-
-
-  
+    //Extrayendo datos de docentes desde firebase.
+    var datosTutoresref = firebase.database().ref('/tutores');
+    datosTutoresref.on("child_added",function (snapshot,Cedula) {
+    var u = snapshot.val();
+    console.log(
+      "Nombre: "+u.nombres,
+      "Correo: "+u.correo,
+      "N° Cédula: "+u.cedula);
+     
+    })
   </script>
 
-=======
->>>>>>> 72ce28a844d966537fae135d82bbd496346e3efc
   <script src="/RegistroEstudiante.js"></script>
+  <script src="/conf.js"></script>
 </body>
 
 </html>
