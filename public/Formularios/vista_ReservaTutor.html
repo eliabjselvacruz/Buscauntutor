@@ -137,17 +137,16 @@
       </h5>
     </div>
 
-    <!-- Listado Docentes -->
-    <div class="center col s12 m12 l12 card-panel z-depth-4">
-<<<<<<< HEAD
+    <!-- Inicio Listado Docentes -->
+    <div id="listado_Docente" class="center col s12 m12 l12 card-panel z-depth-4">
 
-      <!-- Targeta Docente -->
-      <div class="col s12 m4 l4">
+      <!-- Tarjeta Docente -->
+      <div id="tarjeta_Docente" class="col s12 m4 l4">
         <div class="card z-depth-5">
           <div class="deep-orange accent-2 white-text center section">
             <!-- Precio Tutoria -->
-            <h6>
-              C$ 200 por Hora
+            <h6 id="costo">
+              C$ 350 por Hora
             </h6>
           </div>
           <br>
@@ -156,17 +155,17 @@
           </div>
           <div class="card-content">
             <!-- Nombre Docente -->
-            <span class="card-title activator grey-text text-darken-4">Eliab Selva<i class="material-icons right">more_vert</i></span>
+            <span id="nom_t" class="card-title activator grey-text text-darken-4">Eliab Selva<i class="material-icons right">more_vert</i></span>
             <!-- Boton Reserva -->
             <p><a href="#" class="btn btn-small waves-effect waves-light deep-green accent-1 z-depth-5">Reservar</a></p>
           </div>
           <div class="card-reveal">
             <!-- Encabezado Targeta -->
-            <span class="card-title grey-text text-darken-4">Eliab Selva<i class="material-icons right">close</i></span>
+            <span id="Nombre_t" class="card-title grey-text text-darken-4">Eliab Selva<i class="material-icons right">close</i></span>
             <br><br>              
             <div class="divider"></div>
             <!-- Carrera -->
-            <h6>
+            <h6 id="tutoria">
               Ing. Sistemas de Información
             </h6>
 
@@ -174,7 +173,7 @@
 
             <br>
             <!-- Años Experiencia -->
-            <h6>
+            <h6 id="Experiencia">
               Tutor desde hace 15 años
             </h6>
             <!-- Mterias -->
@@ -196,14 +195,10 @@
           </div>
         </div>       
       </div>
-=======
-      <!-- Cargando los datos de los docentes disponibles para tutorias en una giftcard -->
-     <h1>Esperando la parte de klissman y favio</h1>
->>>>>>> 80504b272465da411ab546eda56db8a08d453deb
-
     </div>
-  </div>
+    <!-- Fin listado docente -->
 
+  </div>
   <div class="col s12 m4 l4">
     <!-- Botón Buscar -->
     <button id="btn_buscar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
@@ -278,21 +273,9 @@
   firebase.initializeApp(config);
 </script>
 
-  <script>
-    //Extrayendo datos de docentes desde firebase.
-    var datosTutoresref = firebase.database().ref('/tutores');
-    datosTutoresref.on("child_added",function (snapshot,Cedula) {
-    var u = snapshot.val();
-    console.log(
-      "Nombre: "+u.nombres,
-      "Correo: "+u.correo,
-      "N° Cédula: "+u.cedula);
-     
-    })
-  </script>
-
   <script src="/RegistroEstudiante.js"></script>
-  <script src="/conf.js"></script>
+  <!-- <script src="/conf.js"></script> -->
+  <script src="/reservasTutor.js"></script>
 </body>
 
 </html>
