@@ -71,66 +71,105 @@
   </ul>
 
 <div class="row">
-  <div class="col s3 m3 l3">
-      <div class="deep-orange accent-2 white-text center section z-depth-4">
-        <h5>
-          Filtros
-        </h5>
-      </div>
+  <!-- Barra Lateral Izquierda -->
+  <div class="col s12 m5 l3">
+    <!-- Título Filtros -->
+    <div class="deep-orange accent-2 white-text center section z-depth-4">
+      <h5>
+        Filtros
+      </h5>
+    </div>
 
-  <!-- Formulario -->
-  <div class="center col s12 m12 l12 card-panel z-depth-4">
+    <!-- Formulario Filtros-->
+    <div class="center col s12 m12 l12 card-panel z-depth-4">
+        
+      <!-- Control Materia -->
+      <select class="input-field col s12" id="materia">
+        <option value="" disabled selected>Elije la materia</option>
+        <option value="">Español</option>
+        <option value="">Biologia</option>
+        <option value="">Ingles</option>
+        <option value="">Física</option>
+        <option value="">Química</option>
+        <option value="">Matemática</option>
+        <option value="">Filosofía</option>
+        <option value="">Sociología</option>
+        <option value="">Informática</option>
+        <option value="">Geografía</option>
+        <label for="materia">Ciudad</label>
+      </select>
       
-    <!-- Control Materia -->
-    <select class="input-field col s12" id="materia">
-      <option value="" disabled selected>Elije la materia</option>
-      <option value="">Español</option>
-      <option value="">Biologia</option>
-      <option value="">Ingles</option>
-      <option value="">Física</option>
-      <option value="">Química</option>
-      <option value="">Matemática</option>
-      <option value="">Filosofía</option>
-      <option value="">Sociología</option>
-      <option value="">Informática</option>
-      <option value="">Geografía</option>
-      <label for="materia">Ciudad</label>
-    </select>
+      <!-- Control Nivel Academico -->
+      <select class="input-field col s12" id="nivel">
+        <option value="" disabled selected>Elije el nivel académico</option>
+        <option value="">Primaria</option>
+        <option value="">Secundaria</option>
+        <option value="">Universitario</option>
+        <label for="nivel">Nivel</label>
+      </select>
+
+      <!-- Control Tipo Tutor -->
+      <select class="input-field col s12" id="tipo">
+        <option value="" disabled selected>Elije el tipo de tutor</option>
+        <option value="">Estudiante Universitario</option>
+        <option value="">Profesional</option>
+        <label for="tipo">tipo</label>
+      </select>
+
+      <!-- Botón Limpiar Selecciones -->
+      <button id="btn_limpiar" class="btn btn-small waves-effect waves-light green lighten-1 z-depth-5" type="submit" name="action">
+        <i class="small material-icons right">delete</i>
+        Limpiar
+      </button>
+
+      <br><br>
+
+      <!-- Botón Buscar -->
+      <button id="btn_buscar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
+        <i class="small material-icons right">search</i>
+        Buscar
+      </button>
+
+      <br><br>
+
+    </div>
     
-    <!-- Control Nivel Academico -->
-    <select class="input-field col s12" id="nivel">
-      <option value="" disabled selected>Elije el nivel académico</option>
-      <option value="">Primaria</option>
-      <option value="">Secundaria</option>
-      <option value="">Universitario</option>
-      <label for="nivel">Nivel</label>
-    </select>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <!-- Control Tipo Tutor -->
-    <select class="input-field col s12" id="tipo">
-      <option value="" disabled selected>Elije el tipo de tutor</option>
-      <option value="">Estudiante Universitario</option>
-      <option value="">Profesional</option>
-      <label for="tipo">tipo</label>
-    </select>
+    <!-- Título Ordenar Por -->
+    <div class="deep-orange accent-2 white-text center section z-depth-4">
+      <h5>
+        Ordenar Por
+      </h5>
+    </div>
 
-    <!-- Botón Limpiar Selecciones -->
-    <button id="btn_limpiar" class="btn btn-small waves-effect waves-light green lighten-1 z-depth-5" type="submit" name="action">
-      <i class="small material-icons right">delete</i>
-      Limpiar
-    </button>
-    <br><br>
-    <!-- Botón Buscar -->
-    <button id="btn_buscar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
-      <i class="small material-icons right">search</i>
-      Buscar
-    </button>
-    <br><br>
+    <!-- Formulario Ordenar Por -->
+    <div class="center col s12 m12 l12 card-panel z-depth-4">
+        
+      <!-- Control Materia -->
+      <select class="input-field col s12" id="orden">
+        <option value="" disabled selected>Elije el tipo de orden</option>
+        <option value="">Materias</option>
+        <option value="">Precio Mayor</option>
+        <option value="">Precion Menor</option>
+        <option value="">Puntuación</option>
+        <label for="orden">Ciudad</label>
+      </select>
+
+      <!-- Botón Ordenar -->
+      <button id="btn_ordenar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
+        <i class="small material-icons right">format_line_spacing</i>
+        Ordenar
+      </button>
+
+      <br><br>
+      
+    </div>
 
   </div>
-</div>
 
-  <div class="col s9 m9 l9">
+  <!-- Sección Docentes -->
+  <div class="col s12 m7 l9">
     <div class="indigo darken-1 white-text z-depth-4 center section">
       <h5>
         Docentes
@@ -141,7 +180,7 @@
     <div id="listado_Docente" class="center col s12 m12 l12 card-panel z-depth-4">
 
       <!-- Tarjeta Docente -->
-      <div id="tarjeta_Docente" class="col s12 m4 l4">
+      <div id="tarjeta_Docente" class="col s12 m12 l4">
         <div class="card z-depth-5">
           <div class="deep-orange accent-2 white-text center section">
             <!-- Precio Tutoria -->
@@ -155,7 +194,7 @@
           </div>
           <div class="card-content">
             <!-- Nombre Docente -->
-            <span id="nom_t" class="card-title activator grey-text text-darken-4">Eliab Selva<i class="material-icons right">more_vert</i></span>
+            <span id="nom_t" class="card-title activator grey-text text-darken-4">Eliab Selva</span>
             <!-- Boton Reserva -->
             <p><a href="#" class="btn btn-small waves-effect waves-light deep-green accent-1 z-depth-5">Reservar</a></p>
           </div>
@@ -195,12 +234,14 @@
           </div>
         </div>       
       </div>
+
     </div>
     <!-- Fin listado docente -->
-
   </div>
+  
+
+  <!-- Botón Buscar Más tutores-->
   <div class="col s12 m4 l4">
-    <!-- Botón Buscar -->
     <button id="btn_buscar" class="btn btn-small waves-effect waves-light deep-orange accent-2 z-depth-5" type="submit" name="action">
       <i class="small material-icons right">list</i>
       Mostrar más tutores
