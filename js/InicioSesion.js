@@ -7,7 +7,7 @@ btnGoogle.addEventListener('click', () => {
    firebase.auth().signInWithPopup(provider).
    then(function(result) {
        guardaDatos(result.user);
-      document.location.href = "vista_PerfilUsuario.html";
+      document.location.href = "vista_PerfilEstudiante.html";
              
    }).catch(function(error) {
     var errorCode = error.code;
@@ -40,10 +40,12 @@ btnGoogle.addEventListener('click', () =>{
     sesionGoogle();
 })*/
 
+//Redirigiendo al formulario de regisstro docente
 document.getElementById('registro_T').addEventListener('click',function() {
     document.location.href = "/public/Formularios/vista_RegistroDocente.html";
 });
 
+//Redirigiendo a la pagina principal
 document.getElementById('home').addEventListener('click',function() {
     document.location.href = "/"
 });
