@@ -20,5 +20,6 @@ datosTutoresref.on("child_added",function (snapshot) {
 
 //Cargando el perfil del docente desde la vista de catalogo de docentes
 document.getElementById('btnPerfilT').addEventListener('click',function () {
+    //Contener el metodo de escucha anterior para cargar los datos del usuario
     
 });
