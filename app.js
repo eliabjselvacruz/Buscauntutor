@@ -57,6 +57,10 @@ app.get('/public/Formularios/vista_ReservaPerfilDocente.html',function(req, res)
     res.sendFile(__dirname+'/public/Formularios/vista_ReservaPerfilDocente.html');
 });
 
+app.get('/public/Formularios/vista_PerfilDocente.html',function(req, res) {
+    res.sendFile(__dirname+'/public/Formularios/vista_PerfilDocente.html');
+})
+
 //Message sockets
 io.sockets.on('connection',function(socket){
     socket.on('sendMessage',function(data){
