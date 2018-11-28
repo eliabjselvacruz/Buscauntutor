@@ -3,7 +3,7 @@ document.getElementById('btn_Home').addEventListener('click',function() {
 });
 
 document.getElementById('btn_Perfil').addEventListener('click',function() {
-    document.location.href = "/public/Formularios/vista_PerfilUsuario.html";
+    document.location.href = "/public/Formularios/vista_PerfilEstudiante.html";
 });
 
 document.getElementById('btn_logout').addEventListener('click',function() {

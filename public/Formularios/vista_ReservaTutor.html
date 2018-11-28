@@ -28,14 +28,14 @@
 
             <!-- Botón Página Principal -->
             <li>
-              <a class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
+              <a id="btnHome" class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
                 <i class="small material-icons">home</i>
               </a> 
             </li> 
             
             <!-- Botón Perfil -->
             <li>
-                <a href="#" class="btn red lighten-1 waves-effect waves-light btn-small z-depth-3">
+                <a id="btnPerfilE" href="#" class="btn red lighten-1 waves-effect waves-light btn-small z-depth-3">
                   <i class="small material-icons left">account_box</i>
                   Perfil Estudiante
                 </a>
@@ -43,7 +43,7 @@
 
             <!-- Botón Salir -->
             <li>
-              <a href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
+              <a id="btnLogout" href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
                 <i class="small material-icons">exit_to_app</i>
               </a>
             </li>
@@ -318,11 +318,7 @@
   <!-- <script src="/conf.js"></script> -->
   <script src="/reservasTutor.js"></script>
 
-  <script>
-      document.getElementById('btnPerfilT').addEventListener('click',function() {
-        document.location.href = "/public/Formularios/vista_ReservaPerfilDocente.html";
-      });
-  </script>
+  <script src="/vista_ReservaTutor.js"></script>
 </body>
 
 </html>
