@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Actualizar Clave Estudiante</title>
+  <title>Ajustes Perfil Estudiante</title>
   <!-- CDN de los íconos -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CDN Materialize CSS  -->
@@ -35,7 +35,7 @@
 
             <!-- Botón Reservar -->
             <li>
-                <a id="reservar"href="#" class="btn blue waves-effect waves-light btn-small z-depth-3">
+                <a id="reservar" href="#" class="btn blue waves-effect waves-light btn-small z-depth-3">
                   <i class="small material-icons left">local_activity</i>
                   Reservar
                 </a>
@@ -89,14 +89,14 @@
     </div>
     <br>
     <div class="section">
-        <a id="btn_Ajustes"class="btn green light-1 z-depth-4 col s12" href="#">
+        <a id="btn_Ajustes" class="btn green darken-2 z-depth-4 col s12" href="#">
           <i class="small material-icons right">settings</i>
           Ajustes
         </a>
     </div>
     <br>
     <div class="section">
-        <a id="btn_cambioC" class="btn green darken-2 z-depth-4 col s12" href="#">
+        <a id="btn_cambioC" class="btn green lighten-1 z-depth-4 col s12" href="#">
           <i class="small material-icons right">fingerprint</i>
           Contraseña
         </a>
@@ -120,7 +120,7 @@
     </div>
     <div class="card">
       <div class="card-image">
-        <img id="img_User"alt="imagen">
+        <img id="img_User" src="" alt="imagen">
         <span class="card-title">
           <button class="btn green waves-effect waves-light z-depth-4">
             <i class="small material-icons right">edit</i>
@@ -141,31 +141,89 @@
     <div class="c">
         <div class="row">
             <div class="center col s12 m12 l12 card-panel z-depth-5">
-    
-              <!-- Control Contraseña Actual-->
-              <div class="input-field col s12">
-                  <input   type="password" id="clave_actual_e" class="">
-                  <label for="clave_actual_e">Introduzca su contraseña actual</label>
+              <!-- Control Nombres -->
+              <div class="input-field col s12 m12 l12">
+                  <input type="text" id="nomre_e" class="" required>
+                  <label for="nombre_e">
+                    <i class="tiny material-icons left">account_circle</i>
+                    Ingrese sus nombres
+                  </label>
               </div>
-
-              <!-- Control Nueva Contraseña -->
-              <div class="input-field col s12">
-                  <input   type="password" id="clave_nueva_e" class="">
-                  <label for="clave_e_2">Introduzca su nueva contraseña</label>
+  
+              <!-- Control Apellidos -->
+              <div class="input-field col s12 m12 l12">
+                  <input type="text" id="apellido_e" class="">
+                  <label for="apellido_e">
+                    <i class="tiny material-icons left">account_circle</i>
+                    Ingrese sus apellidos
+                  </label>
               </div>
-
-              <!-- Control Verificación Nueva Contraseña -->
-              <div class="input-field col s12">
-                <input   type="password" id="clave_nueva_e_2" class="">
-                <label for="clave_e_2">Confirme la contraseña</label>
+  
+              <!-- Control Telefono -->
+              <div class="input-field col s12 m12 l12">
+                  <input   type="number" id="telefono_e" class="" min="0">
+                  <label for="telefono_e">
+                    <i class="tiny material-icons left">contact_phone</i> 
+                    Teléfono
+                  </label>
               </div>
               
-              <!-- Botón Actualizar -->
-              <button id="btn_actualizar_clave_e" class="btn waves-effect waves-light pink lighten-1 z-depth-5" type="submit" name="action">
-                <i class="small material-icons right">update</i>
-                Actualizar
-              </button>
-              <br><br>
+              <!-- Control Email -->
+              <div class="input-field col s12 m12 l12">
+                  <input   type="email" id="email_e" class="" min="0" disabled>
+                  <label for="email_e">
+                      <i class="tiny material-icons left">email</i> 
+                    Correo electrónico
+                  </label>
+              </div>
+
+              <!-- Control Departamento -->
+              <select class="input-field col s12 m12 l12" id="ciudad_e">
+                <option value="" disabled selected>Seleccione su departamento</option>
+                <option value="">Atlántico Norte</option>
+                <option value="">Atlántico Sur</option>
+                <option value="">Boaco</option>
+                <option value="">Carazo</option>
+                <option value="">Chinandega</option>
+                <option value="">Chontales</option>
+                <option value="">Estelí</option>
+                <option value="">Granada</option>
+                <option value="">Jinotega</option>
+                <option value="">León</option>
+                <option value="">Madriz</option>
+                <option value="">Managua</option>
+                <option value="">Masaya</option>
+                <option value="">Matagalpa</option>
+                <option value="">Nueva Segovia</option>
+                <option value="">Río San Juan</option>
+                <option value="">Rivas</option>
+                <label for="ciudad_e">Ciudad</label>
+              </select>
+  
+              <!-- Control Idioma -->
+              <select class="input-field col s12 m12 l12" id="idioma_e">
+                <option value="" disabled selected>Seleccione su idioma</option>
+                <option value="">Español</option>
+                <option value="">Ingles</option>
+                <label for="idioma_e">Idioma</label>
+              </select>
+  
+              <!-- Control Género -->
+              <select class="input-field col s12 m12 l12" id="genero_e">
+                <option value="" disabled selected>Seleccione su género</option>
+                <option value="">Masculino</option>
+                <option value="">Femenino</option>
+                <option value="">Otro</option>
+                <label for="genero_e">Genero</label>
+              </select>
+              
+            <!-- Botón de Actualizar -->
+            <button id="btn_actualizar_e" class="btn waves-effect waves-light pink lighten-1 z-depth-5" type="submit" name="action">
+              <i class="small material-icons right">update</i>
+              Actualizar
+            </button>
+            <br>
+            <br>
   
             </div>
         </div>
@@ -223,10 +281,8 @@
     }
     );
   </script>
-
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script>
-  // Initialize Firebase
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script>
   var config = {
     apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
     authDomain: "busca-un-tutor.firebaseapp.com",
@@ -236,13 +292,11 @@
     messagingSenderId: "356130835030"
   };
   firebase.initializeApp(config);
-</script>
-
+  </script>
+  <script src="/redirecciones.js"></script>
   <script src="/RegistroEstudiante.js"></script>
   <script src="/btnsPerfil.js"></script>
   <script src="/conf.js">  </script>
-  <script src="/redirecciones.js"></script>
-  
 </body>
 
 </html>
