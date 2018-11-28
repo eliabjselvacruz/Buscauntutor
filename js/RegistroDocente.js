@@ -11,6 +11,8 @@ var Experiencia = obtVal('experiencia_t');
 var idioma = obtVal('idioma_t');
 var sexo = obtVal('genero_t');
 var departamento = obtVal('ciudad_ts');
+var descripcion = obtVal('descripcion_t'); //Nuevo
+var Materias = obtVal('materias_t'); //Nuevo
 
 //Get the Elements from Controls Html for the storage
 var Curriculum = document.getElementById('CV');
@@ -58,13 +60,13 @@ Registrar.addEventListener('click',function () {
     else{
 
         saveData(nCedula.value,nombres.value,apellidos.value,correo.value,telefono.value,
-        Experiencia.value,idioma.value,sexo.value,departamento.value)
+        Experiencia.value,idioma.value,sexo.value,departamento.value,descripcion.value,Materias.value)
 
     }
     
 });
 
- function saveData(id,nombres,apellidos,correo,telefono,experiencia,idioma,sexo,departamento) {
+ function saveData(id,nombres,apellidos,correo,telefono,experiencia,idioma,sexo,departamento,descripcion,materias) {
     tutor ={
         cedula : id, //Cedula
         nombres : nombres,
@@ -74,7 +76,10 @@ Registrar.addEventListener('click',function () {
         experiencia: experiencia,
         idioma : idioma,
         sexo: sexo,
-        departamento: departamento
+        departamento: departamento,
+        descripcion : descripcion,//Nuevo
+        materias: materias//Nuevo
+
 
     }
     firebase.database().ref('tutores/'+ id).set(tutor);
