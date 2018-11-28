@@ -7,7 +7,7 @@ btnGoogle.addEventListener('click', () => {
    firebase.auth().signInWithPopup(provider).
    then(function(result) {
        guardaDatos(result.user);
-      document.location.href = "vista_PerfilUsuario.html";
+      document.location.href = "vista_PerfilEstudiante.html";
              
    }).catch(function(error) {
     var errorCode = error.code;

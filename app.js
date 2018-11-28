@@ -29,16 +29,16 @@ app.get('/public/Formularios/vista_InicioSesion.html',function(req,res) {
     res.sendFile(__dirname+'/public/Formularios/vista_InicioSesion.html');
 });
 
-app.get('/public/Formularios/vista_PerfilUsuario.html',function(req,res) {
-    res.sendFile(__dirname+'/public/Formularios/vista_PerfilUsuario.html');
+app.get('/public/Formularios/vista_PerfilEstudiante.html',function(req,res) {
+    res.sendFile(__dirname+'/public/Formularios/vista_PerfilEstudiante.html');
 });
 
-app.get('/public/Formularios/vista_ActualizacionClaveUsuario.html',function(req,res){
-    res.sendFile(__dirname+'/public/Formularios/vista_ActualizacionClaveUsuario.html');
+app.get('/public/Formularios/vista_ActualizacionClaveEstudiante.html',function(req,res){
+    res.sendFile(__dirname+'/public/Formularios/vista_ActualizacionClaveEstudiante.html');
 });
 
-app.get('/public/Formularios/vista_EdicionPerfilUsuario.html',function(req,res) {
-    res.sendFile(__dirname+'/public/Formularios/vista_EdicionPerfilUsuario.html');
+app.get('/public/Formularios/vista_EdicionPerfilEstudiante.html',function(req,res) {
+    res.sendFile(__dirname+'/public/Formularios/vista_EdicionPerfilEstudiante.html');
 });
 
 app.get('/public/Formularios/Index.html',function(req,res) {

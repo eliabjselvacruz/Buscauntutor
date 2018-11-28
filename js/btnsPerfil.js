@@ -5,13 +5,14 @@
   });
   //Llamando a la configuración de la pagina de cambio de contraseña.
   document.getElementById('btn_cambioC').addEventListener('click',function() { 
-    document.location.href = "vista_ActualizacionClaveUsuario.html"; 
+    document.location.href = "vista_ActualizacionClaveEstudiante.html"; 
   });
   //Llamando regresando al perfil del usuario ya logged.
   document.getElementById('btn_toperfil').addEventListener('click',function() {
-    document.location.href = "vista_PerfilUsuario.html";
+    document.location.href = "vista_PerfilEstudiante.html";
   });
 
   document.getElementById('btn_Ajustes').addEventListener('click',function() {
-    document.location.href = "vista_EdicionPerfilUsuario.html";
+    document.location.href = "vista_EdicionPerfilEstudiante.html";
   });
+  
