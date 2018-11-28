@@ -28,14 +28,14 @@
 
             <!-- Botón Página Principal -->
             <li>
-              <a class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
+              <a id="btn_Home" class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
                 <i class="small material-icons">home</i>
               </a> 
             </li> 
             
             <!-- Botón Perfil -->
             <li>
-                <a href="#" class="btn red lighten-1 waves-effect waves-light btn-small z-depth-3">
+                <a id="btn_Perfil" href="#" class="btn red lighten-1 waves-effect waves-light btn-small z-depth-3">
                   <i class="small material-icons left">account_box</i>
                   Perfil Estudiante
                 </a>
@@ -43,7 +43,7 @@
 
             <!-- Botón Salir -->
             <li>
-              <a href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
+              <a id="btn_logout" href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
                 <i class="small material-icons">exit_to_app</i>
               </a>
             </li>
@@ -191,7 +191,21 @@
     }
     );
   </script>
-  <script src="/js/RegistroEstudiante.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+   <script>
+     // Initialize Firebase
+     var config = {
+       apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+       authDomain: "busca-un-tutor.firebaseapp.com",
+       databaseURL: "https://busca-un-tutor.firebaseio.com",
+       projectId: "busca-un-tutor",
+       storageBucket: "busca-un-tutor.appspot.com",
+       messagingSenderId: "356130835030"
+     };
+     firebase.initializeApp(config);
+   </script>
+  <script src="/vista_ReservaPerfilDocente.js"></script>
+  
 </body>
 
 </html>

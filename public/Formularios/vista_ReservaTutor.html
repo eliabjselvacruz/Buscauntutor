@@ -196,7 +196,11 @@
             <!-- Nombre Docente -->
             <span id="nom_t" class="card-title activator grey-text text-darken-4">Eliab Selva</span>
             <!-- Boton Reserva -->
+<<<<<<< HEAD
+            <p><a id="btn_Reservar" href="#" class="btn btn-small waves-effect waves-light deep-green accent-1 z-depth-5">Reservar</a></p>
+=======
             <p><a id="btnPerfilT" href="#" class="btn btn-small waves-effect waves-light deep-green accent-1 z-depth-5">Reservar</a></p>
+>>>>>>> 0669e51d68a496e555cf43572f21062499661ddb
           </div>
           <div class="card-reveal">
             <!-- Encabezado Targeta -->
@@ -317,6 +321,12 @@
   <script src="/RegistroEstudiante.js"></script>
   <!-- <script src="/conf.js"></script> -->
   <script src="/reservasTutor.js"></script>
+
+  <script>
+      document.getElementById('btn_Reservar').addEventListener('click',function() {
+        document.location.href = "/public/Formularios/vista_ReservaPerfilDocente.html";
+      });
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualizar Clave Docente</title>
+  <!-- CDN de los íconos -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CDN Materialize CSS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Cuerpo del Sitio -->
+  
+  <!-- Barra de nvegación -->
+  <div class=" navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <div class="">
+          <a href="#" class="brand-logo">Busca Tutor</a>
+          <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+
+            <!-- Botón Página Principal -->
+            <li>
+              <a id="home" class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
+                <i class="small material-icons">home</i>
+              </a> 
+            </li> 
+
+            <!-- Botón Reservar -->
+            <li>
+                <a id="reservar"href="#" class="btn blue waves-effect waves-light btn-small z-depth-3">
+                  <i class="small material-icons left">local_activity</i>
+                  Reservar
+                </a>
+            </li>
+
+            <!-- Botón Perfil -->
+            <li>
+                <a href="#" class="btn red lighten-1 waves-effect waves-light btn-small z-depth-3">
+                  <i class="small material-icons left">account_box</i>
+                  Perfil Estudiante
+                </a>
+            </li>
+
+            <!-- Botón Salir -->
+            <li>
+              <a id="btn_salir" href="#" class="btn blue lighten-1 waves-effect waves-light btn-small z-depth-3">
+                <i class="small material-icons">exit_to_app</i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Barra de Navegación Lateral-->
+  <ul class="side-nav" id="mobile-menu">
+
+      <div class="blue white-text center section z-depth-4">
+        <h3>
+          MENÚ
+        </h3>
+      </div>
+
+      <li><a class="btn pink lighten-1 z-depth-4" href="#">Página Principal</a></li>
+      <li><a class="btn blue z-depth-4" href="#">Registro Estudiante</a></li>
+      <li><a class="btn blue z-depth-4" href="#">Registro Docente</a></li>
+      <li><a class="btn green z-depth-4" href="#">Subscribirse</a></li>
+      <li><a class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
+  </ul>
+
+<div class="row" id="bmm">
+  <div class="col s2 blue lighten-4 z-depth-4"">
+
+    <div class="section">
+        <a id="btn_toperfil" class="btn green lighten-1 z-depth-4 col s12" href="#">
+          <i class="small material-icons right">account_box</i>
+          Perfil
+        </a>
+    </div>
+    <br>
+    <div class="section">
+        <a id="btn_Ajustes"class="btn green light-1 z-depth-4 col s12" href="#">
+          <i class="small material-icons right">settings</i>
+          Ajustes
+        </a>
+    </div>
+    <br>
+    <div class="section">
+        <a id="btn_cambioC" class="btn green darken-2 z-depth-4 col s12" href="#">
+          <i class="small material-icons right">fingerprint</i>
+          Contraseña
+        </a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+
+  <div class="col s10">
+    <div class=" center section z-depth-4">
+      <h5>
+        Actualización de Clave de Docente
+      </h5>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="blue darken-1 white-text center">
+      <h5 id="nombre_g">
+        Eliab Selva
+      </h5>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img id="img_User"alt="imagen">
+        <span class="card-title">
+          <button class="btn green waves-effect waves-light z-depth-4">
+            <i class="small material-icons right">edit</i>
+            Editar
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s6">
+    <div class="blue darken-1 white-text center">
+      <h5>
+        Datos Generales
+      </h5>
+    </div>
+
+    <div class="c">
+        <div class="row">
+            <div class="center col s12 m12 l12 card-panel z-depth-5">
+    
+              <!-- Control Contraseña Actual-->
+              <div class="input-field col s12">
+                  <input   type="password" id="clave_actual_e" class="">
+                  <label for="clave_actual_e">
+                    <i class="tiny material-icons left">fingerprint</i> 
+                    Introduzca su contraseña actual
+                  </label>
+              </div>
+
+              <!-- Control Nueva Contraseña -->
+              <div class="input-field col s12">
+                  <input   type="password" id="clave_nueva_e" class="">
+                  <label for="clave_e_2">
+                    <i class="tiny material-icons left">fingerprint</i> 
+                    Introduzca su nueva contraseña
+                  </label>
+              </div>
+
+              <!-- Control Verificación Nueva Contraseña -->
+              <div class="input-field col s12">
+                <input   type="password" id="clave_nueva_e_2" class="">
+                <label for="clave_e_2">
+                  <i class="tiny material-icons left">fingerprint</i> 
+                  Confirme la contraseña
+                </label>
+              </div>
+              
+              <!-- Botón Actualizar -->
+              <button id="btn_actualizar_clave_e" class="btn waves-effect waves-light pink lighten-1 z-depth-5" type="submit" name="action">
+                <i class="small material-icons right">update</i>
+                Actualizar
+              </button>
+              <br><br>
+  
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Pie de Página -->
+<footer class="page-footer blue darken-4">
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col l6 s12">
+          <h5 class="white-text">Contenido del footer</h5>
+          <p class="grey-text text-lighten-4">Contenido que puede ir en el pie de la pagina.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Vínculos</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center">
+      <div class="container">
+        &copy; 2018 Copyright Busca un Tutor - Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!--  CDN jQuery -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <!-- CDN Materialize JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  <!-- Métodos de los componentes del Materialize -->
+  <script>
+    $("document").ready(function () {
+    $('select').material_select();
+    });
+    $(".button-collapse").sideNav();
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, 
+      hover: true, 
+      gutter: 0, 
+      belowOrigin: false, 
+      alignment: 'left', 
+      stopPropagation: false 
+    }
+    );
+  </script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+    authDomain: "busca-un-tutor.firebaseapp.com",
+    databaseURL: "https://busca-un-tutor.firebaseio.com",
+    projectId: "busca-un-tutor",
+    storageBucket: "busca-un-tutor.appspot.com",
+    messagingSenderId: "356130835030"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script src="/RegistroEstudiante.js"></script>
+  <script src="/btnsPerfil.js"></script>
+  <script src="/conf.js">  </script>
+  <script src="/redirecciones.js"></script>
+  
+</body>
+
+</html>
