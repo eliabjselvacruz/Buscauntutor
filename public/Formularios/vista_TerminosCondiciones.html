@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Docente</title>
+  <!-- CDN de los íconos -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CDN Materialize CSS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Cuerpo del Sitio -->
+  
+  <!-- Barra de nvegación -->
+  <div class=" navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <div class="">
+          <a href="#" class="brand-logo">Busca Tutor</a>
+          <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            
+            <!-- Botón Página Principal -->
+            <li>
+                <a id="home" class="btn blue waves-effect waves-light btn-small z-depth-3" href="#" >
+                  <i class="small material-icons">home</i>
+                </a>
+            </li>
+
+            <li>
+              <!-- Botón Menú Opciones-->
+              <a class='dropdown-button btn z-depth-3' href='#' data-activates='dropdown1'>
+                <i class="small material-icons left">menu</i>
+                Menú
+              </a>
+
+              <!-- Menú del botón -->
+              <ul id='dropdown1' class='dropdown-content'>
+                <li><a  href="#">Registrarse como Estudiante</a></li>
+                <li><a href="#">Registrarse como Docente</a></li>
+              </ul>
+            </li>
+
+            <!-- Botón Inicio Sesión -->
+            <li>
+              <a id="inicio_S" class="btn red lighten-1 waves-effect waves-light z-depth-3" href="#" >
+                <i class="small material-icons left">account_box</i>
+                Iniciar sesión
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Barra de Navegación Lateral-->
+  <ul class="side-nav" id="mobile-menu">
+
+      <div class="blue white-text center section z-depth-4">
+        <h3>
+          MENÚ
+        </h3>
+      </div>
+
+      <li><a id="pag_ini" class="btn pink lighten-1 z-depth-4" href="#">Página Principal</a></li>
+      <li><a class="btn blue z-depth-4" href="#">Registro Estudiante</a></li>
+      <li><a id="registro_T" class="btn blue z-depth-4" href="#">Registro Docente</a></li>
+      <li><a class="btn green z-depth-4" href="#">Subscribirse</a></li>
+      <li><a id="inicio_S" class="btn red z-depth-4" href="#">Inicio de Sesión</a></li>
+  </ul>
+
+  <!-- Formulario -->
+  <div class="container">
+    <div class="row">
+        <div class="center col s12 m12 l12 card-panel z-depth-5">
+
+            <!-- Encabezado -->
+            <h3 class="center cyan white-text">Términos y Condiciones</h3>
+
+            <!-- Información Términos y Condiciones -->
+            <div class="input-field col s12 m12 l12"style="text-align:justify;">
+              <p>
+                Bienvenido a Buscauntutor.com, la plataforma más completa para aprender y enseñar en línea.
+              </p>
+              <p>
+                Al acceder a cualquier parte del Servicio, usted está aceptando los términos y condiciones que se describen a continuación, nuestra política de privacidad, Políticas de Pago, Normas de los Buscauntutor y cualquier otro aviso legal publicado en Buscauntutor. Si usted no está de acuerdo con cualquiera de estos términos, no debe utilizar el Servicio. Estas condiciones se aplican a todos los usuarios que ingresan a Buscauntutor, incluidos aquellos que simplemente están viendo el contenido disponible en la página web (usuarios no registrados), así como los usuarios que se han registrado. 
+              </p>
+              <p>
+                Nosotros podemos, a nuestra discreción, modificar las presentes Condiciones del Servicio. Al acceder al Servicio en cualquier momento después de las modificaciones, usted acepta los cambios realizados. Estas Condiciones del servicio se modificaron por última vez el 28 de noviembre de 2018.
+              </p>
+              <p>
+                Este servicio requerirá la revisión de los datos de su identificación. Por ello usted acepta con estos Términos y Condiciones, suministrar su información personal y toda aquella necesaria para la ejecución de este servicio. Toda persona mayor de dieciocho (18) años podrá dar su consentimiento libremente; al ser menor de dicha edad, deberá suministrar los datos de sus padres/representante legal a fin de considerar válida su aceptación de estos términos y condiciones.
+              </p>
+              <h5>
+                Descripción del Servicio
+              </h5>
+              <div class="divider"></div>
+              <p>
+                El servicio de Buscauntutor es una plataforma de tutoría en línea, en la cual los usuarios pueden registrarse para enseñar o aprender sobre algún tema en específico.
+              </p>
+              <p>
+                De cada tutoría realizada, los tutores reciben 80% de ganacia percibida y el otro 20% corresponderá a Buscauntutor.com. Los usuarios no pagan una cuota mensual o de suscripción.
+              </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pie de Página -->
+<footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Contenido del footer</h5>
+          <p class="grey-text text-lighten-4">Contenido que puede ir en el pie de la pagina.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Vínculos</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center">
+      <div class="container">
+        &copy; 2018 Copyright Busca un Tutor - Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!--  CDN jQuery -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <!-- CDN Materialize JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  <!-- Métodos de los componentes del Materialize -->
+  <script>
+    $("document").ready(function () {
+    $('select').material_select();
+    });
+    $(".button-collapse").sideNav();
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, 
+      hover: true, 
+      gutter: 0, 
+      belowOrigin: false, 
+      alignment: 'left', 
+      stopPropagation: false 
+    }
+    );
+  </script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBkzPutvxVDFGuQRSRavh_fwmIZif8nrs0",
+    authDomain: "busca-un-tutor.firebaseapp.com",
+    databaseURL: "https://busca-un-tutor.firebaseio.com",
+    projectId: "busca-un-tutor",
+    storageBucket: "busca-un-tutor.appspot.com",
+    messagingSenderId: "356130835030"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script src="/RegistroDocente.js"></script>
+  <script src="/btnsIndex.js"></script>
+<script> 
+
+document.getElementById('home').addEventListener('click',function name(params) {
+  document.location.href="/"
+});
+</script>
+<script src="/RegistroDocente.js"></script>
+  <script src="/js/RegistroDocente.js"></script>
+  <script src="/js/btnsIndex.js"></script>
+</body>
+
+</html>

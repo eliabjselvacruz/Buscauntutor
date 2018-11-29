@@ -14,7 +14,7 @@ loginT.addEventListener('click', function() {
         }
     );
     
-})
+});
 
 //Escuchando la actividad de sesion de usuario
 firebase.auth().onAuthStateChanged(function(user) {
@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // User is signed in.
       console.log("El usuario está logged");
       console.log(user);
-      loginT.addEventListener('click',function () {
+     loginT.addEventListener('click',function () {
       document.location.href = "/public/Formularios/vista_PerfilDocente.html";
     });
     } else {
